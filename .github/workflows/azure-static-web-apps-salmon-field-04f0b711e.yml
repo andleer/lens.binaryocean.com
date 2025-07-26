@@ -24,7 +24,7 @@ jobs:
           lfs: false
       - uses: actions/setup-node@v4 # Use the latest stable version of setup-node
         with:
-          node-version: '20.x' # Or '22.x' or a specific version like '20.19.0'
+          node-version: '22.17.1'
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
