@@ -113,7 +113,7 @@
                 @for (data of lens.data; track $index) {
                   <div class="spec-row">
                     <div class="focal-length">{{ data.focalLength }}mm</div>
-                    <div class="aperture">f/{{ data.aperture }}</div>
+                    <div class="aperture">f/{{ data.aperture | number:'1.1-1' }}</div>
                     <div class="min-focus">{{ data.minFocus }}m</div>
                     <div class="magnification">{{ data.magnification | number:'1.2-2' }}×</div>
                   </div>

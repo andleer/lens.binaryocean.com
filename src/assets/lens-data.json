@@ -10,8 +10,26 @@
         {
             "focalLength": 100,
             "aperture": 4.5,
-            "minFocus": 0.98,
+            "minFocus": 0.75,
             "magnification": 0.23
+        },
+        {
+            "focalLength": 135,
+            "aperture": 4.8,
+            "minFocus": 0.82,
+            "magnification": 0.27
+        },
+        {
+            "focalLength": 200,
+            "aperture": 5.0,
+            "minFocus": 0.86,
+            "magnification": 0.30
+        },
+        {
+            "focalLength": 300,
+            "aperture": 5.3,
+            "minFocus": 0.92,
+            "magnification": 0.34
         },
         {
             "focalLength": 400,
@@ -56,7 +74,7 @@
         {
             "focalLength": 200,
             "aperture": 2.8,
-            "minFocus": 0.55,
+            "minFocus": 1.0,
             "magnification": 0.34
         }
     ]
