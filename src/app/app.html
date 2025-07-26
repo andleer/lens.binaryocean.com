@@ -1,0 +1,151 @@
+<div class="lens-data-app">
+  <header class="app-header">
+    <h1>{{ title() }}</h1>
+    <p>Browse and explore camera lens specifications</p>
+  </header>
+
+  <main class="app-content">
+    <!-- Filter Controls -->
+    <section class="filters-section">
+      <h2>Filter Lenses</h2>
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="manufacturer-filter">Manufacturer:</label>
+          <select 
+            id="manufacturer-filter" 
+            [value]="filterManufacturer()" 
+            (change)="filterManufacturer.set($any($event.target).value); applyFilters()">
+            <option value="">All Manufacturers</option>
+            @for (manufacturer of manufacturers; track manufacturer) {
+              <option [value]="manufacturer">{{ manufacturer }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="mount-filter">Mount:</label>
+          <select 
+            id="mount-filter" 
+            [value]="filterMount()" 
+            (change)="filterMount.set($any($event.target).value); applyFilters()">
+            <option value="">All Mounts</option>
+            @for (mount of mounts; track mount) {
+              <option [value]="mount">{{ mount }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="teleconverter-filter">Teleconverter Compatible:</label>
+          <select 
+            id="teleconverter-filter" 
+            [value]="filterTeleconverter()" 
+            (change)="filterTeleconverter.set($any($event.target).value); applyFilters()">
+            <option value="">All</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <button type="button" class="clear-filters-btn" (click)="clearFilters()">
+          Clear Filters
+        </button>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <!-- Lens List -->
+      <section class="lens-list-section">
+        <h2>Lenses ({{ filteredLenses().length }})</h2>
+        <div class="lens-cards">
+          @for (lens of filteredLenses(); track lens.model) {
+            <div 
+              class="lens-card" 
+              [class.selected]="selectedLens() === lens"
+              (click)="selectLens(lens)">
+              <div class="lens-card-header">
+                <h3>{{ lens.shortName }}</h3>
+                <span class="manufacturer">{{ lens.manufacturer }}</span>
+              </div>
+              <div class="lens-card-body">
+                <p class="model">{{ lens.model }}</p>
+                <div class="lens-meta">
+                  <span class="mount">{{ lens.mount }}</span>
+                  @if (lens.teleconverter) {
+                    <span class="tc-badge">TC</span>
+                  }
+                </div>
+              </div>
+            </div>
+          }
+          @if (filteredLenses().length === 0) {
+            <div class="no-results">
+              <p>No lenses match your filter criteria.</p>
+            </div>
+          }
+        </div>
+      </section>
+
+      <!-- Lens Details -->
+      <section class="lens-details-section">
+        @if (selectedLens(); as lens) {
+          <div class="lens-details">
+            <div class="details-header">
+              <h2>{{ lens.model }}</h2>
+              <div class="lens-badges">
+                <span class="manufacturer-badge">{{ lens.manufacturer }}</span>
+                <span class="mount-badge">{{ lens.mount }}</span>
+                @if (lens.teleconverter) {
+                  <span class="tc-badge">TC</span>
+                }
+              </div>
+            </div>
+
+            <div class="specifications">
+              <h3>Specifications</h3>
+              <div class="spec-table">
+                <div class="spec-header">
+                  <div>Focal Length</div>
+                  <div>Max Aperture</div>
+                  <div>Min Focus</div>
+                  <div>Magnification</div>
+                </div>
+                @for (data of lens.data; track $index) {
+                  <div class="spec-row">
+                    <div class="focal-length">{{ data.focalLength }}mm</div>
+                    <div class="aperture">f/{{ data.aperture }}</div>
+                    <div class="min-focus">{{ data.minFocus }}m</div>
+                    <div class="magnification">{{ data.magnification | number:'1.2-2' }}×</div>
+                  </div>
+                }
+              </div>
+            </div>
+
+            @if (lens.data.length > 1) {
+              <div class="focal-range-info">
+                <h4>Focal Range Summary</h4>
+                <div class="range-stats">
+                  <div>
+                    <strong>Focal Length:</strong> 
+                    {{ lens.data[0].focalLength }}mm - {{ lens.data[lens.data.length - 1].focalLength }}mm
+                  </div>
+                  <div>
+                    <strong>Best Magnification:</strong> 
+                    {{ getMaxMagnificationWithFocalLength(lens).magnification | number:'1.2-2' }}× at {{ getMaxMagnificationWithFocalLength(lens).focalLength }}mm
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="no-selection">
+            <div class="placeholder">
+              <h3>Select a lens to view details</h3>
+              <p>Click on any lens from the list to see its specifications and data.</p>
+            </div>
+          </div>
+        }
+      </section>
+    </div>
+  </main>
+</div>
