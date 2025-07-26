@@ -9,7 +9,6 @@ export interface Lens {
   id: number;
   manufacturer: string;
   model: string;
-  shortName: string;
   mount: string;
   teleconverter: boolean;
   data: LensSpecification[];
