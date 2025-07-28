@@ -11,7 +11,7 @@ on:
 
 env:
   NODE_VERSION: '22'
-  OUTPUT_LOCATION: 'dist/lensdata'
+  OUTPUT_LOCATION: 'dist/lensdata/browser'
 
 jobs:
   build_and_deploy_job:
