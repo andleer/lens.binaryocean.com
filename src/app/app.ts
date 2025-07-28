@@ -5,11 +5,12 @@ import { LensDataService } from '../services/lens-data.service';
 import { LensService } from '../services/lens.service';
 import { LensFiltersComponent, FilterCriteria } from './components/lens-filters/lens-filters.component';
 import { LensListComponent } from './components/lens-list/lens-list.component';
+import { LensDetailsComponent } from './components/lens-details/lens-details.component';
 import { Lens } from '../contracts/lens.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, LensFiltersComponent, LensListComponent],
+  imports: [CommonModule, FormsModule, LensFiltersComponent, LensListComponent, LensDetailsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -66,14 +67,5 @@ export class App {
   
   onLensSelected(lens: Lens) {
     this.selectedLens.set(lens);
-  }
-
-  // Delegate to lens service for magnification calculations
-  getMaxMagnification(lens: Lens): number {
-    return this.lensService.getMaxMagnification(lens);
-  }
-
-  getMaxMagnificationWithFocalLength(lens: Lens): { magnification: number, focalLength: number } {
-    return this.lensService.getMaxMagnificationWithFocalLength(lens);
   }
 }

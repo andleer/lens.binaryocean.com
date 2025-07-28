@@ -1,0 +1,59 @@
+<section class="lens-details-section">
+  @if (selectedLens(); as lens) {
+    <div class="lens-details">
+      <div class="details-header">
+        <h2>{{ lens.model }}</h2>
+        <div class="lens-badges">
+          <span class="badge">{{ lens.manufacturer }}</span>
+          <span class="badge">{{ lens.mount }}</span>
+          @if (lens.teleconverter) {
+            <span class="badge">TC</span>
+          }
+        </div>
+      </div>
+
+      <div class="specifications">
+        <h3>Specifications</h3>
+        <div class="spec-table">
+          <div class="spec-header">
+            <div>Focal Length</div>
+            <div>Max Aperture</div>
+            <div>Min Focus</div>
+            <div>Magnification</div>
+          </div>
+          @for (data of lens.data; track $index) {
+            <div class="spec-row">
+              <div class="focal-length">{{ data.focalLength }}mm</div>
+              <div class="aperture">f/{{ data.aperture.toFixed(1) }}</div>
+              <div class="min-focus">{{ data.minFocus.toFixed(2) }}m</div>
+              <div class="magnification">{{ data.magnification | number:'1.2-2' }}×</div>
+            </div>
+          }
+        </div>
+      </div>
+
+      @if (lens.data.length > 1) {
+        <div class="focal-range-info">
+          <h4>Focal Range Summary</h4>
+          <div class="range-stats">
+            <div>
+              <strong>Focal Length:</strong> 
+              {{ lens.data[0].focalLength }}mm - {{ lens.data[lens.data.length - 1].focalLength }}mm
+            </div>
+            <div>
+              <strong>Best Magnification:</strong> 
+              {{ getMaxMagnificationWithFocalLength(lens).magnification | number:'1.2-2' }}× at {{ getMaxMagnificationWithFocalLength(lens).focalLength }}mm
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="no-selection">
+      <div class="placeholder">
+        <h3>Select a lens to view details</h3>
+        <p>Click on any lens from the list to see its specifications and data.</p>
+      </div>
+    </div>
+  }
+</section>
