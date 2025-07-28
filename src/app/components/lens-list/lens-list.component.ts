@@ -12,12 +12,27 @@ import { Lens } from '../../../contracts/lens.interface';
 export class LensListComponent {
   // Input properties
   lenses = input.required<Lens[]>();
-  selectedLens = input<Lens | null>(null);
+  selectedLenses = input<Lens[]>([]);
   
   // Output events
-  lensSelected = output<Lens>();
+  lensesSelected = output<Lens[]>();
 
   onLensClick(lens: Lens) {
-    this.lensSelected.emit(lens);
+    const currentSelection = [...this.selectedLenses()];
+    const isSelected = currentSelection.some(selected => selected.model === lens.model);
+    
+    if (isSelected) {
+      // Remove lens from selection
+      const updatedSelection = currentSelection.filter(selected => selected.model !== lens.model);
+      this.lensesSelected.emit(updatedSelection);
+    } else {
+      // Add lens to selection
+      const updatedSelection = [...currentSelection, lens];
+      this.lensesSelected.emit(updatedSelection);
+    }
+  }
+
+  isLensSelected(lens: Lens): boolean {
+    return this.selectedLenses().some(selected => selected.model === lens.model);
   }
 }

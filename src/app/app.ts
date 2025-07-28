@@ -23,7 +23,7 @@ export class App {
   // Use service signals directly
   readonly lenses = this.lensDataService.lensData;
   filteredLenses = signal<Lens[]>([]);
-  selectedLens = signal<Lens | null>(null);
+  selectedLenses = signal<Lens[]>([]);
 
   constructor() {
     // Initialize filtered lenses with all lenses, sorted by max focal length
@@ -62,10 +62,10 @@ export class App {
     });
     
     this.filteredLenses.set(filteredLenses);
-    this.selectedLens.set(null);
+    this.selectedLenses.set([]);
   }
   
-  onLensSelected(lens: Lens) {
-    this.selectedLens.set(lens);
+  onLensesSelected(lenses: Lens[]) {
+    this.selectedLenses.set(lenses);
   }
 }

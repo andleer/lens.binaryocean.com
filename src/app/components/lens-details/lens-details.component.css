@@ -127,6 +127,195 @@
   font-weight: 600;
 }
 
+/* Lens Comparison Styles */
+.lens-comparison {
+  width: 100%;
+}
+
+.comparison-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.comparison-header h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.compared-lenses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.comparison-badge {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+.comparison-badge .lens-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.comparison-badge .lens-mount {
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comparison-table-container {
+  margin-bottom: 24px;
+}
+
+.comparison-table-container h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.comparison-table {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.comparison-header-row, .comparison-row {
+  display: grid;
+  min-width: fit-content;
+  grid-template-columns: 150px repeat(var(--lens-count, 2), 1fr);
+  gap: 1px;
+}
+
+.comparison-header-row {
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #d1d5db;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.comparison-row {
+  border-bottom: 1px solid #f3f4f6;
+  background-color: white;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row:hover {
+  background-color: #f9fafb;
+}
+
+.focal-length-header, .focal-length-cell {
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.lens-column-header, .lens-data-cell {
+  padding: 12px 16px;
+  text-align: center;
+  border-right: 1px solid #f3f4f6;
+}
+
+.lens-column-header:last-child, .lens-data-cell:last-child {
+  border-right: none;
+}
+
+.lens-column-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lens-column-header .lens-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.lens-column-header .lens-model {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.lens-data-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+}
+
+.lens-data-cell .aperture {
+  color: #111827;
+  font-weight: 500;
+}
+
+.lens-data-cell .min-focus {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.lens-data-cell .magnification {
+  color: #111827;
+  font-weight: 600;
+}
+
+.lens-data-cell .no-data {
+  color: #9ca3af;
+  font-size: 14px;
+  align-self: center;
+}
+
+.comparison-summary {
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  color: white;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.comparison-summary h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.summary-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lens-summary {
+  font-size: 14px;
+  color: white;
+}
+
+.lens-summary strong {
+  color: white;
+  font-weight: 600;
+}
+
 .no-selection {
   display: flex;
   align-items: center;
@@ -159,8 +348,8 @@
     padding: 16px;
   }
 
-  .details-header h2 {
-    font-size: 24px;
+  .details-header h2, .comparison-header h2 {
+    font-size: 20px;
   }
 
   .spec-header, .spec-row {
@@ -173,13 +362,30 @@
     padding: 4px 0;
   }
 
-  .spec-header div:before {
-    content: attr(data-label) ": ";
-    font-weight: 600;
-    color: #dab99d;
+  .comparison-table {
+    font-size: 12px;
+    overflow-x: auto;
   }
 
-  .range-stats {
+  .compared-lenses {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .comparison-badge {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .focal-length-header, .focal-length-cell {
+    padding: 8px 12px;
+  }
+
+  .lens-column-header, .lens-data-cell {
+    padding: 8px 12px;
+  }
+
+  .range-stats, .summary-stats {
     font-size: 13px;
   }
 }
@@ -189,11 +395,19 @@
     padding: 12px;
   }
 
-  .details-header h2 {
-    font-size: 20px;
+  .details-header h2, .comparison-header h2 {
+    font-size: 18px;
   }
 
-  .specifications h3 {
-    font-size: 18px;
+  .specifications h3, .comparison-table-container h3 {
+    font-size: 16px;
+  }
+
+  .comparison-table {
+    font-size: 11px;
+  }
+
+  .lens-data-cell {
+    font-size: 10px;
   }
 }

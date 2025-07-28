@@ -14,13 +14,13 @@
       <!-- Lens List -->
       <app-lens-list 
         [lenses]="filteredLenses()"
-        [selectedLens]="selectedLens()"
-        (lensSelected)="onLensSelected($event)">
+        [selectedLenses]="selectedLenses()"
+        (lensesSelected)="onLensesSelected($event)">
       </app-lens-list>
 
       <!-- Lens Details -->
       <app-lens-details 
-        [selectedLens]="selectedLens()">
+        [selectedLenses]="selectedLenses()">
       </app-lens-details>
     </div>
   </main>
