@@ -93,4 +93,14 @@ export class LensService {
       focalLength: dataWithMaxMag?.focalLength || 0
     };
   }
+
+  /**
+   * Get maximum focal length for a lens
+   * 
+   * @param lens - Lens object with data array
+   * @returns Maximum focal length value
+   */
+  getMaxFocalLength(lens: Lens): number {
+    return Math.max(...lens.data.map(d => d.focalLength));
+  }
 }

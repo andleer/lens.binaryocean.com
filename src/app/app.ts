@@ -36,8 +36,13 @@ export class App {
   }
 
   constructor() {
-    // Initialize filtered lenses with all lenses
-    this.filteredLenses.set(this.lenses());
+    // Initialize filtered lenses with all lenses, sorted by max focal length
+    const sortedLenses = [...this.lenses()].sort((a, b) => {
+      const maxFocalA = this.lensService.getMaxFocalLength(a);
+      const maxFocalB = this.lensService.getMaxFocalLength(b);
+      return maxFocalA - maxFocalB;
+    });
+    this.filteredLenses.set(sortedLenses);
   }
   
   applyFilters() {
@@ -52,15 +57,25 @@ export class App {
       criteria.mounts = this.selectedMounts();
     }
     
+    let filteredLenses: Lens[];
+    
     // If no filters are applied, show all lenses
     if (Object.keys(criteria).length === 0) {
-      this.filteredLenses.set(this.lenses());
+      filteredLenses = [...this.lenses()];
     } else {
       // Use the service's filterLenses method
       const filteredSignal = this.lensDataService.filterLenses(criteria);
-      this.filteredLenses.set(filteredSignal());
+      filteredLenses = [...filteredSignal()];
     }
     
+    // Sort by maximum focal length (ascending order)
+    filteredLenses.sort((a, b) => {
+      const maxFocalA = this.lensService.getMaxFocalLength(a);
+      const maxFocalB = this.lensService.getMaxFocalLength(b);
+      return maxFocalA - maxFocalB;
+    });
+    
+    this.filteredLenses.set(filteredLenses);
     this.selectedLens.set(null);
   }
 
@@ -91,7 +106,15 @@ export class App {
   clearFilters() {
     this.selectedManufacturers.set([]);
     this.selectedMounts.set([]);
-    this.filteredLenses.set(this.lenses());
+    
+    // Sort lenses by max focal length when clearing filters
+    const sortedLenses = [...this.lenses()].sort((a, b) => {
+      const maxFocalA = this.lensService.getMaxFocalLength(a);
+      const maxFocalB = this.lensService.getMaxFocalLength(b);
+      return maxFocalA - maxFocalB;
+    });
+    
+    this.filteredLenses.set(sortedLenses);
     this.selectedLens.set(null);
   }
 
