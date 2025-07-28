@@ -23,7 +23,6 @@ export class LensFiltersComponent {
   
   // Output events
   filtersChanged = output<FilterCriteria>();
-  filtersCleared = output<void>();
   
   // Get unique manufacturers and mounts from service
   get manufacturers(): string[] {
@@ -52,12 +51,6 @@ export class LensFiltersComponent {
       this.selectedMounts.set([...current, mount]);
     }
     this.emitFilters();
-  }
-  
-  clearFilters() {
-    this.selectedManufacturers.set([]);
-    this.selectedMounts.set([]);
-    this.filtersCleared.emit();
   }
 
   private emitFilters() {

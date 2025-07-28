@@ -104,26 +104,3 @@
 .checkbox-label span {
   user-select: none;
 }
-
-.clear-filters-btn {
-  padding: 0.5rem 1rem;
-  background: #4b5563;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  height: fit-content;
-}
-
-.clear-filters-btn:hover:not(:disabled) {
-  background: #374151;
-}
-
-.clear-filters-btn:disabled {
-  background: #d1d5db;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
