@@ -22,10 +22,9 @@ export class App {
   filteredLenses = signal<Lens[]>([]);
   selectedLens = signal<Lens | null>(null);
   
-  // Filter properties
-  filterManufacturer = signal('');
-  filterMount = signal('');
-  filterTeleconverter = signal('');
+  // Filter properties - changed to arrays for multiple selections
+  selectedManufacturers = signal<string[]>([]);
+  selectedMounts = signal<string[]>([]);
   
   // Get unique manufacturers and mounts from service
   get manufacturers(): string[] {
@@ -45,16 +44,12 @@ export class App {
     // Use the service's filterLenses method for better performance
     const criteria: any = {};
     
-    if (this.filterManufacturer()) {
-      criteria.manufacturers = [this.filterManufacturer()];
+    if (this.selectedManufacturers().length > 0) {
+      criteria.manufacturers = this.selectedManufacturers();
     }
     
-    if (this.filterMount()) {
-      criteria.mounts = [this.filterMount()];
-    }
-    
-    if (this.filterTeleconverter()) {
-      criteria.teleconverterCompatible = this.filterTeleconverter() === 'true';
+    if (this.selectedMounts().length > 0) {
+      criteria.mounts = this.selectedMounts();
     }
     
     // If no filters are applied, show all lenses
@@ -68,15 +63,34 @@ export class App {
     
     this.selectedLens.set(null);
   }
+
+  toggleManufacturer(manufacturer: string) {
+    const current = this.selectedManufacturers();
+    if (current.includes(manufacturer)) {
+      this.selectedManufacturers.set(current.filter(m => m !== manufacturer));
+    } else {
+      this.selectedManufacturers.set([...current, manufacturer]);
+    }
+    this.applyFilters();
+  }
+
+  toggleMount(mount: string) {
+    const current = this.selectedMounts();
+    if (current.includes(mount)) {
+      this.selectedMounts.set(current.filter(m => m !== mount));
+    } else {
+      this.selectedMounts.set([...current, mount]);
+    }
+    this.applyFilters();
+  }
   
   selectLens(lens: Lens) {
     this.selectedLens.set(lens);
   }
   
   clearFilters() {
-    this.filterManufacturer.set('');
-    this.filterMount.set('');
-    this.filterTeleconverter.set('');
+    this.selectedManufacturers.set([]);
+    this.selectedMounts.set([]);
     this.filteredLenses.set(this.lenses());
     this.selectedLens.set(null);
   }

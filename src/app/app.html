@@ -10,46 +10,34 @@
       <h2>Filter Lenses</h2>
       <div class="filter-controls">
         <div class="filter-group">
-          <label for="manufacturer-filter">Manufacturer:</label>
-          <select 
-            id="manufacturer-filter" 
-            [value]="filterManufacturer()" 
-            (change)="filterManufacturer.set($any($event.target).value); applyFilters()">
-            <option value="">All Manufacturers</option>
+          <label>Manufacturers:</label>
+          <div class="checkbox-group">
             @for (manufacturer of manufacturers; track manufacturer) {
-              <option [value]="manufacturer">{{ manufacturer }}</option>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  [checked]="selectedManufacturers().includes(manufacturer)"
+                  (change)="toggleManufacturer(manufacturer)">
+                <span>{{ manufacturer }}</span>
+              </label>
             }
-          </select>
+          </div>
         </div>
 
         <div class="filter-group">
-          <label for="mount-filter">Mount:</label>
-          <select 
-            id="mount-filter" 
-            [value]="filterMount()" 
-            (change)="filterMount.set($any($event.target).value); applyFilters()">
-            <option value="">All Mounts</option>
+          <label>Mounts:</label>
+          <div class="checkbox-group">
             @for (mount of mounts; track mount) {
-              <option [value]="mount">{{ mount }}</option>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  [checked]="selectedMounts().includes(mount)"
+                  (change)="toggleMount(mount)">
+                <span>{{ mount }}</span>
+              </label>
             }
-          </select>
+          </div>
         </div>
-
-        <div class="filter-group">
-          <label for="teleconverter-filter">Teleconverter Compatible:</label>
-          <select 
-            id="teleconverter-filter" 
-            [value]="filterTeleconverter()" 
-            (change)="filterTeleconverter.set($any($event.target).value); applyFilters()">
-            <option value="">All</option>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-          </select>
-        </div>
-
-        <button type="button" class="clear-filters-btn" (click)="clearFilters()">
-          Clear Filters
-        </button>
       </div>
     </section>
 
@@ -64,9 +52,8 @@
               [class.selected]="selectedLens() === lens"
               (click)="selectLens(lens)">
               <div class="lens-card-header">
-                <h3>{{ lens.model }}</h3>
-                <span class="manufacturer">{{ lens.manufacturer }}</span>
-              </div>
+                <span>{{ lens.manufacturer }} {{ lens.model }}</span>
+             </div>
             </div>
           }
           @if (filteredLenses().length === 0) {

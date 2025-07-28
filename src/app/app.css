@@ -119,6 +119,46 @@
   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
 }
 
+/* Checkbox group styles */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  background: white;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background-color: var(--gray-50);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.checkbox-label span {
+  user-select: none;
+}
+
 .clear-filters-btn {
   padding: 0.5rem 1rem;
   background: var(--gray-600);
