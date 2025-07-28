@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { LensDataService } from '../services/lens-data.service';
 import { LensService } from '../services/lens.service';
 import { LensFiltersComponent, FilterCriteria } from './components/lens-filters/lens-filters.component';
+import { LensListComponent } from './components/lens-list/lens-list.component';
 import { Lens } from '../contracts/lens.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, LensFiltersComponent],
+  imports: [CommonModule, FormsModule, LensFiltersComponent, LensListComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -63,7 +64,7 @@ export class App {
     this.selectedLens.set(null);
   }
   
-  selectLens(lens: Lens) {
+  onLensSelected(lens: Lens) {
     this.selectedLens.set(lens);
   }
 

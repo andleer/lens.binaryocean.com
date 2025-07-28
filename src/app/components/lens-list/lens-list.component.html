@@ -1,0 +1,20 @@
+<section class="lens-list-section">
+  <h2>Lenses ({{ lenses().length }})</h2>
+  <div class="lens-cards">
+    @for (lens of lenses(); track lens.model) {
+      <div 
+        class="lens-card" 
+        [class.selected]="selectedLens() === lens"
+        (click)="onLensClick(lens)">
+        <div class="lens-card-header">
+          <span>{{ lens.manufacturer }} {{ lens.model }}</span>
+        </div>
+      </div>
+    }
+    @if (lenses().length === 0) {
+      <div class="no-results">
+        <p>No lenses match your filter criteria.</p>
+      </div>
+    }
+  </div>
+</section>

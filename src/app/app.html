@@ -12,26 +12,11 @@
 
     <div class="content-grid">
       <!-- Lens List -->
-      <section class="lens-list-section">
-        <h2>Lenses ({{ filteredLenses().length }})</h2>
-        <div class="lens-cards">
-          @for (lens of filteredLenses(); track lens.model) {
-            <div 
-              class="lens-card" 
-              [class.selected]="selectedLens() === lens"
-              (click)="selectLens(lens)">
-              <div class="lens-card-header">
-                <span>{{ lens.manufacturer }} {{ lens.model }}</span>
-             </div>
-            </div>
-          }
-          @if (filteredLenses().length === 0) {
-            <div class="no-results">
-              <p>No lenses match your filter criteria.</p>
-            </div>
-          }
-        </div>
-      </section>
+      <app-lens-list 
+        [lenses]="filteredLenses()"
+        [selectedLens]="selectedLens()"
+        (lensSelected)="onLensSelected($event)">
+      </app-lens-list>
 
       <!-- Lens Details -->
       <section class="lens-details-section">
@@ -60,8 +45,8 @@
                 @for (data of lens.data; track $index) {
                   <div class="spec-row">
                     <div class="focal-length">{{ data.focalLength }}mm</div>
-                    <div class="aperture">f/{{ data.aperture | number:'1.1-1' }}</div>
-                    <div class="min-focus">{{ data.minFocus }}m</div>
+                    <div class="aperture">f/{{ data.aperture.toFixed(1) }}</div>
+                    <div class="min-focus">{{ data.minFocus.toFixed(2) }}m</div>
                     <div class="magnification">{{ data.magnification | number:'1.2-2' }}×</div>
                   </div>
                 }
