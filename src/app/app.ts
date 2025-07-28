@@ -62,18 +62,6 @@ export class App {
     this.filteredLenses.set(filteredLenses);
     this.selectedLens.set(null);
   }
-
-  onFiltersCleared() {
-    // Sort lenses by max focal length when clearing filters
-    const sortedLenses = [...this.lenses()].sort((a, b) => {
-      const maxFocalA = this.lensService.getMaxFocalLength(a);
-      const maxFocalB = this.lensService.getMaxFocalLength(b);
-      return maxFocalA - maxFocalB;
-    });
-    
-    this.filteredLenses.set(sortedLenses);
-    this.selectedLens.set(null);
-  }
   
   selectLens(lens: Lens) {
     this.selectedLens.set(lens);
