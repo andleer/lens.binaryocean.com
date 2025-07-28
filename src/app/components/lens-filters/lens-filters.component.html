@@ -1,0 +1,41 @@
+<section class="filters-section">
+  <h2>Filter Lenses</h2>
+  <div class="filter-controls">
+    <div class="filter-group">
+      <label>Manufacturers:</label>
+      <div class="checkbox-group">
+        @for (manufacturer of manufacturers; track manufacturer) {
+          <label class="checkbox-label">
+            <input 
+              type="checkbox" 
+              [checked]="selectedManufacturers().includes(manufacturer)"
+              (change)="toggleManufacturer(manufacturer)">
+            <span>{{ manufacturer }}</span>
+          </label>
+        }
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label>Mounts:</label>
+      <div class="checkbox-group">
+        @for (mount of mounts; track mount) {
+          <label class="checkbox-label">
+            <input 
+              type="checkbox" 
+              [checked]="selectedMounts().includes(mount)"
+              (change)="toggleMount(mount)">
+            <span>{{ mount }}</span>
+          </label>
+        }
+      </div>
+    </div>
+
+    <button 
+      class="clear-filters-btn" 
+      (click)="clearFilters()"
+      [disabled]="selectedManufacturers().length === 0 && selectedMounts().length === 0">
+      Clear Filters
+    </button>
+  </div>
+</section>
