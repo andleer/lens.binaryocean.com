@@ -282,8 +282,25 @@
 
 .lens-data-cell .no-data {
   color: #9ca3af;
-  font-size: 14px;
+  font-size: 12px;
   align-self: center;
+}
+
+.lens-data-cell.best-magnification {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.lens-data-cell.best-magnification .aperture,
+.lens-data-cell.best-magnification .min-focus,
+.lens-data-cell.best-magnification .magnification {
+  color: white;
+}
+
+.lens-data-cell.best-magnification .magnification {
+  font-weight: 700;
 }
 
 .comparison-summary {

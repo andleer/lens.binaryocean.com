@@ -85,12 +85,15 @@
               <div class="focal-length-cell">{{ focalLength }}mm</div>
               @for (lens of selectedLenses(); track lens.model) {
                 @let lensData = getLensDataAtFocalLength(lens, focalLength);
-                <div class="lens-data-cell">
+                <div class="lens-data-cell" 
+                     [class.best-magnification]="lensData && isBestMagnificationAtFocalLength(lens, focalLength)">
                   @if (lensData) {
                     <div class="aperture">f/{{ lensData.aperture.toFixed(1) }}</div>
                     <div class="min-focus">{{ lensData.minFocus.toFixed(2) }}m</div>
                     <div class="magnification">{{ lensData.magnification | number:'1.2-2' }}×</div>
                   } @else {
+                    <div class="no-data">—</div>
+                    <div class="no-data">—</div>
                     <div class="no-data">—</div>
                   }
                 </div>

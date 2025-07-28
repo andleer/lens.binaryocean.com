@@ -14,9 +14,6 @@
         (click)="onLensClick(lens)">
         <div class="lens-card-header">
           <span>{{ lens.manufacturer }} {{ lens.model }}</span>
-          @if (isLensSelected(lens)) {
-            <span class="selection-indicator">✓</span>
-          }
         </div>
       </div>
     }

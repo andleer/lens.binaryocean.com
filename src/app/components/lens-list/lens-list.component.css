@@ -121,20 +121,6 @@
   letter-spacing: 0.05em;
 }
 
-.selection-indicator {
-  background: #10b981;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 600;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-}
-
 .lens-card.selected .manufacturer {
   opacity: 0.9;
 }

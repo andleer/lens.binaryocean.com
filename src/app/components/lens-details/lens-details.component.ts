@@ -47,4 +47,26 @@ export class LensDetailsComponent {
   getLensDataAtFocalLength(lens: Lens, focalLength: number) {
     return lens.data.find(data => data.focalLength === focalLength);
   }
+
+  // Helper method to find the lens with the best magnification at a specific focal length
+  getBestMagnificationAtFocalLength(focalLength: number): { lens: Lens; magnification: number } | null {
+    let bestLens: Lens | null = null;
+    let bestMagnification = 0;
+
+    this.selectedLenses().forEach(lens => {
+      const lensData = this.getLensDataAtFocalLength(lens, focalLength);
+      if (lensData && lensData.magnification > bestMagnification) {
+        bestMagnification = lensData.magnification;
+        bestLens = lens;
+      }
+    });
+
+    return bestLens ? { lens: bestLens, magnification: bestMagnification } : null;
+  }
+
+  // Helper method to check if a lens has the best magnification at a focal length
+  isBestMagnificationAtFocalLength(lens: Lens, focalLength: number): boolean {
+    const best = this.getBestMagnificationAtFocalLength(focalLength);
+    return best ? best.lens.model === lens.model : false;
+  }
 }
