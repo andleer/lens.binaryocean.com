@@ -3,7 +3,7 @@
     "id": 1001,
     "manufacturer": "Nikon",
     "model": "Z 100-400mm f/4.5-5.6 VR S",   
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -42,7 +42,7 @@
     "id": 1003,
     "manufacturer": "Nikon",
     "model": "Z 70-200mm f/2.8 VR S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -81,7 +81,7 @@
     "id": 1002,
     "manufacturer": "Nikon",
     "model": "Z 105mm f/2.8 VR S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -96,7 +96,7 @@
     "id": 1004,
     "manufacturer": "Nikon",
     "model": "Z 600mm f/6.3 VR S PF",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -111,7 +111,7 @@
     "id": 1005,
     "manufacturer": "Nikon",
     "model": "Z 50mm f/2.8 Macro",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -126,7 +126,7 @@
     "id": 1006,
     "manufacturer": "Nikon",
     "model": "Z 180-600mm f/5.6-6.3 VR",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -147,7 +147,7 @@
     "id": 1007,
     "manufacturer": "Nikon",
     "model": "Z 400mm f/4.5 VR S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -162,7 +162,7 @@
     "id": 1008,
     "manufacturer": "Nikon",
     "model": "Z 50mm f/1.8 S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -177,7 +177,7 @@
     "id": 1009,
     "manufacturer": "Nikon",
     "model": "Z 70-180mm f/2.8",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -198,7 +198,7 @@
     "id": 1000,
     "manufacturer": "Nikon",
     "model": "Z 24-120mm f/4 S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -219,7 +219,7 @@
     "id": 1010,
     "manufacturer": "Nikon",
     "model": "Z 14-30mm f/4 S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -240,7 +240,7 @@
     "id": 1011,
     "manufacturer": "Nikon",
     "model": "Z 40mm f/2",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": false,
     "data": [
         {
@@ -255,7 +255,7 @@
     "id": 1012,
     "manufacturer": "Nikon",
     "model": "Z 600mm f/4 TC VR S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -270,7 +270,7 @@
     "id": 1013,
     "manufacturer": "Nikon",
     "model": "Z 400mm f/2.8 TC VR S",
-    "mount": "Nikon Z",
+    "mount": "Z Mount",
     "teleconverter": true,
     "data": [
         {
@@ -285,7 +285,7 @@
     "id": 3000,
     "manufacturer": "Sony",
     "model": "FE 90mm f/2.8 Macro G OSS",
-    "mount": "Sony E",
+    "mount": "E Mount",
     "teleconverter": false,
     "data": [
         {
@@ -300,7 +300,7 @@
     "id": 3001,
     "manufacturer": "Sony",
     "model": "FE 50mm f/2.8 Macro",
-    "mount": "Sony E",
+    "mount": "E Mount",
     "teleconverter": false,
     "data": [
         {
@@ -315,7 +315,7 @@
     "id": 3002,
     "manufacturer": "Sony",
     "model": "FE 70-200mm f/2.8 Macro G OSS II",
-    "mount": "Sony E",
+    "mount": "E Mount",
     "teleconverter": true,
     "data": [
         {
@@ -336,7 +336,7 @@
     "id": 3003,
     "manufacturer": "Sony",
     "model": "FE 35mm f/1.8",
-    "mount": "Sony E",
+    "mount": "E Mount",
     "teleconverter": false,
     "data": [
         {
@@ -351,7 +351,7 @@
     "id": 5000,
     "manufacturer": "Canon",
     "model": "RF 100mm f/2.8L Macro IS USM",
-    "mount": "Canon RF",
+    "mount": "RF Mount",
     "teleconverter": false,
     "data": [
         {
@@ -366,7 +366,7 @@
     "id": 5001,
     "manufacturer": "Canon",
     "model": "RF 85mm f/2 Macro IS STM",
-    "mount": "Canon RF",
+    "mount": "RF Mount",
     "teleconverter": false,
     "data": [
         {
@@ -381,7 +381,7 @@
     "id": 5002,
     "manufacturer": "Canon",
     "model": "RF 100-500mm f/4.5-7.1L IS USM",
-    "mount": "Canon RF",
+    "mount": "RF Mount",
     "teleconverter": true,
     "data": [
         {
@@ -402,7 +402,7 @@
     "id": 5003,
     "manufacturer": "Canon",
     "model": "RF 70-200mm f/2.8L IS USM",
-    "mount": "Canon RF",
+    "mount": "RF Mount",
     "teleconverter": true,
     "data": [
         {
@@ -423,7 +423,7 @@
     "id": 5004,
     "manufacturer": "Canon",
     "model": "RF 100-400mm f/5.6-8L IS USM",
-    "mount": "Canon RF",
+    "mount": "RF Mount",
     "teleconverter": true,
     "data": [
         {

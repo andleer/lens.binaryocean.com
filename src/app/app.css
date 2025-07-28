@@ -217,9 +217,12 @@
 }
 
 .lens-card-header h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 500;
   margin: 0;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .lens-card-header .manufacturer {
@@ -231,6 +234,10 @@
 }
 
 .lens-card.selected .manufacturer {
+  opacity: 0.9;
+}
+
+.lens-card.selected h3 {
   opacity: 0.9;
 }
 
@@ -256,18 +263,7 @@
   opacity: 0.8;
 }
 
-.tc-badge {
-  background: var(--accent-green);
-  color: white;
-  padding: 0.125rem 0.5rem;
-  border-radius: 1rem;
-  font-size: 0.625rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.lens-card.selected .tc-badge {
+.lens-card.selected .badge {
   background: rgba(255, 255, 255, 0.2);
   color: white;
 }
@@ -308,8 +304,8 @@
   gap: 0.5rem;
 }
 
-.manufacturer-badge {
-  background: var(--primary-blue);
+.badge {
+  background: var(--gray-400);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: var(--border-radius);
@@ -317,15 +313,6 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.mount-badge {
-  background: var(--gray-600);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--border-radius);
-  font-size: 0.75rem;
-  font-weight: 600;
 }
 
 .specifications h3 {

@@ -6,7 +6,7 @@ import { LensService } from './lens.service';
 // Example: Calculate magnifications for the Nikon 70-200mm lens data points
 const lensService = new LensService();
 
-// Test data for Nikon Z 70-200mm f/2.8 VR S
+// Test data for Z Mount 70-200mm f/2.8 VR S
 const testData = [
   { focalLength: 70, minFocus: 0.55 },
   { focalLength: 85, minFocus: 0.63 },
@@ -15,7 +15,7 @@ const testData = [
   { focalLength: 200, minFocus: 0.55 }
 ];
 
-console.log('Nikon Z 70-200mm f/2.8 VR S - Calculated Magnifications:');
+console.log('Z Mount 70-200mm f/2.8 VR S - Calculated Magnifications:');
 console.log('=========================================================');
 
 testData.forEach(data => {
