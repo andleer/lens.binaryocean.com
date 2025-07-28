@@ -25,46 +25,11 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: 🟢 Setup Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: 🔍 Verify environment
-        run: |
-          echo "Node.js version: $(node --version)"
-          echo "NPM version: $(npm --version)"
-          echo "Working directory: $(pwd)"
-          echo "Repository contents:"
-          ls -la
-
-      - name: 📦 Install dependencies
-        run: npm ci
-
-      - name: 🔧 Build Angular application
-        run: npm run build
-        env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
-
-      - name: 📋 Verify build output
-        run: |
-          echo "Build completed. Checking output directory..."
-          if [ -d "${{ env.OUTPUT_LOCATION }}" ]; then
-            echo "✅ Build output found in ${{ env.OUTPUT_LOCATION }}"
-            echo "Contents:"
-            ls -la ${{ env.OUTPUT_LOCATION }}
-            echo "Total files: $(find ${{ env.OUTPUT_LOCATION }} -type f | wc -l)"
-          else
-            echo "❌ Build output directory not found: ${{ env.OUTPUT_LOCATION }}"
-            echo "Available directories in dist/:"
-            ls -la dist/ || echo "No dist directory found"
-            exit 1
-          fi
-
-      - name: 🚀 Deploy to Azure Static Web Apps
+      - name: � Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
+        env:
+          NODE_VERSION: ${{ env.NODE_VERSION }}
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ASHY_BEACH_0A8A87A1E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -73,9 +38,6 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: ${{ env.OUTPUT_LOCATION }}
-          # Build configuration
-          skip_app_build: true # We build manually above for better control
-          skip_api_build: true # No API in this Angular-only app
 
       - name: ✅ Deployment Status
         run: |
