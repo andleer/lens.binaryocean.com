@@ -487,5 +487,44 @@
         "magnification": 0.41
       }
     ]
+  },
+  {
+    "id": 6000,
+    "manufacturer": "Tamron",
+    "model": "70-180mm f/2.8 Di III VXD",
+    "mount": "Z Mount",
+    "teleconverter": false,
+    "data": [
+      {
+        "focalLength": 70,
+        "aperture": 2.8,
+        "minFocus": 0.85,
+        "magnification": 0.20
+      },
+      {
+        "focalLength": 85,
+        "aperture": 2.8,
+        "minFocus": 0.85,
+        "magnification": -1
+      },
+      {
+        "focalLength": 105,
+        "aperture": 2.8,
+        "minFocus": 0.85,
+        "magnification": -1
+      },
+      {
+        "focalLength": 135,
+        "aperture": 2.8,
+        "minFocus": 0.85,
+        "magnification": -1
+      },
+      {
+        "focalLength": 180,
+        "aperture": 2.8,
+        "minFocus": 0.85,
+        "magnification": 0.32
+      }
+    ]
   }
 ]
