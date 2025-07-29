@@ -48,33 +48,33 @@
         {
             "focalLength": 70,
             "aperture": 2.8,
-            "minFocus": 0.55,
-            "magnification": 0.20
+            "minFocus": 0.5,
+            "magnification": 0.13
         },
         {
             "focalLength": 85,
             "aperture": 2.8,
             "minFocus": 0.63,
-            "magnification": 0.21
+            "magnification": 0.125
         },
         {
             "focalLength": 105,
             "aperture": 2.8,
             "minFocus": 0.68,
-            "magnification": 0.24
+            "magnification": 0.146
         },
         {
             "focalLength": 135,
             "aperture": 2.8,
             "minFocus": 0.80,
-            "magnification": 0.26
+            "magnification": 0.162
         },
         {
             "focalLength": 200,
             "aperture": 2.8,
             "minFocus": 1.0,
-            "magnification": 0.34
-        }
+            "magnification": 0.20
+               }
     ]
 },
 {

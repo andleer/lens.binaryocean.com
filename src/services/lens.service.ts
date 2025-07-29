@@ -44,6 +44,42 @@ export class LensService {
   }
 
   /**
+   * Calculate magnification at one focal length based on known magnification at another focal length
+   * Formula: M₁ = M₂ × (f₁/f₂) × [(u₂ - f₂)/(u₁ - f₁)]
+   * 
+   * This accounts for both focal length changes and focus distance differences across zoom ranges
+   * 
+   * @param targetFocalLength - Target focal length (f₁) in millimeters
+   * @param targetFocusDistance - Focus distance at target focal length (u₁) in meters
+   * @param referenceFocalLength - Reference focal length (f₂) in millimeters
+   * @param referenceFocusDistance - Focus distance at reference focal length (u₂) in meters
+   * @param referenceMagnification - Known magnification at reference focal length (M₂)
+   * @returns Calculated magnification at target focal length (M₁)
+   */
+  calculateMagnificationAcrossFocalLengths(
+    targetFocalLength: number,
+    targetFocusDistance: number,
+    referenceFocalLength: number,
+    referenceFocusDistance: number,
+    referenceMagnification: number
+  ): number {
+    // Convert focus distances from meters to millimeters
+    const u1 = targetFocusDistance * 1000;
+    const u2 = referenceFocusDistance * 1000;
+    const f1 = targetFocalLength;
+    const f2 = referenceFocalLength;
+    const M2 = referenceMagnification;
+    
+    // Apply the formula: M₁ = M₂ × (f₁/f₂) × [(u₂ - f₂)/(u₁ - f₁)]
+    const focalRatio = f1 / f2;
+    const focusRatio = (u2 - f2) / (u1 - f1);
+    const M1 = M2 * focalRatio * focusRatio;
+    
+    // Return absolute value and round to reasonable precision
+    return Math.abs(Math.round(M1 * 1000) / 1000);
+  }
+
+  /**
    * Format magnification for display (e.g., 0.25 -> "1:4")
    * 
    * @param magnification - Magnification ratio
