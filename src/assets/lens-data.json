@@ -282,6 +282,21 @@
     ]
 },
 {
+    "id": 1014,
+    "manufacturer": "Nikon",
+    "model": "Z 85mm f/1.8 S",
+    "mount": "Z Mount",
+    "teleconverter": true,
+    "data": [
+        {
+            "focalLength": 85,
+            "aperture": 1.8,
+            "minFocus": 0.8,
+            "magnification": 0.12
+        }
+    ]
+},
+{
     "id": 3000,
     "manufacturer": "Sony",
     "model": "FE 90mm f/2.8 Macro G OSS",
