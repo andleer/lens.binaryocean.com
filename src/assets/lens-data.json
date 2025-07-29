@@ -15,19 +15,19 @@
         {
             "focalLength": 135,
             "aperture": 4.8,
-            "minFocus": 0.82,
+            "minFocus": 0.78,
             "magnification": 0.27
         },
         {
             "focalLength": 200,
             "aperture": 5.0,
-            "minFocus": 0.86,
+            "minFocus": 0.8,
             "magnification": 0.30
         },
         {
             "focalLength": 300,
             "aperture": 5.3,
-            "minFocus": 0.92,
+            "minFocus": 0.87,
             "magnification": 0.34
         },
         {
