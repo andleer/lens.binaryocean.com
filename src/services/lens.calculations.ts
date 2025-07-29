@@ -80,6 +80,41 @@ export class LensService {
   }
 
   /**
+   * Calculate f-number (aperture) at any focal length for variable aperture zoom lenses
+   * Formula: f-number = f_min + (f_max - f_min) × (FL - FL_min) / (FL_max - FL_min)
+   * 
+   * This interpolates the aperture value based on the focal length within the zoom range
+   * 
+   * @param targetFocalLength - Target focal length (FL) in millimeters
+   * @param minFocalLength - Minimum focal length (FL_min) in millimeters
+   * @param maxFocalLength - Maximum focal length (FL_max) in millimeters
+   * @param minAperture - Aperture at minimum focal length (f_min)
+   * @param maxAperture - Aperture at maximum focal length (f_max)
+   * @returns Calculated f-number at target focal length
+   */
+  calculateApertureAtFocalLength(
+    targetFocalLength: number,
+    minFocalLength: number,
+    maxFocalLength: number,
+    minAperture: number,
+    maxAperture: number
+  ): number {
+    // Ensure target focal length is within the zoom range
+    const FL = Math.max(minFocalLength, Math.min(maxFocalLength, targetFocalLength));
+    const FL_min = minFocalLength;
+    const FL_max = maxFocalLength;
+    const f_min = minAperture;
+    const f_max = maxAperture;
+    
+    // Apply the formula: f-number = f_min + (f_max - f_min) × (FL - FL_min) / (FL_max - FL_min)
+    const focalRatio = (FL - FL_min) / (FL_max - FL_min);
+    const aperture = f_min + (f_max - f_min) * focalRatio;
+    
+    // Round to one decimal place for f-number precision
+    return Math.round(aperture * 10) / 10;
+  }
+
+  /**
    * Format magnification for display (e.g., 0.25 -> "1:4")
    * 
    * @param magnification - Magnification ratio
