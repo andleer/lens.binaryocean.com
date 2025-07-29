@@ -1,7 +1,7 @@
 import { Component, input, inject, ElementRef, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Lens } from '../../../contracts/lens.interface';
-import { LensService } from '../../../services/lens.calculations';
+import { LensService } from '../../../services/lens-calculations-service';
 
 @Component({
   selector: 'app-lens-details',

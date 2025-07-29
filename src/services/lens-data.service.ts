@@ -1,7 +1,7 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { LensData, Lens } from '../contracts/lens.interface';
 import lensDataJson from '../assets/lens-data.json';
-import { LensService } from './lens.calculations';
+import { LensService } from './lens-calculations-service';
 
 
 @Injectable({
@@ -19,7 +19,7 @@ export class LensDataService {
   readonly lensData = this._lensData.asReadonly();
 
   private loadData(): void {
-    // Process lens data to calculate magnifications where set to -1
+    // Process lens data to calculate magnifications and apertures where set to -1
     const processedData = lensDataJson.map(lens => {
       // Find the maximum magnification value for this lens (reference point)
       const maxMagnificationEntry = lens.data
@@ -29,15 +29,23 @@ export class LensDataService {
           { magnification: 0, focalLength: 0, aperture: 0, minFocus: 0 }
         );
 
-      // If no positive magnification found, return lens as-is
-      if (maxMagnificationEntry.magnification === 0) {
-        return lens;
-      }
+      // For aperture calculation on zoom lenses, find min and max focal lengths with valid apertures
+      const validApertureEntries = lens.data.filter(entry => entry.aperture > 0);
+      const minFocalLengthEntry = validApertureEntries.reduce((min, current) => 
+        current.focalLength < min.focalLength ? current : min,
+        validApertureEntries[0] || { focalLength: Infinity, aperture: 0 }
+      );
+      const maxFocalLengthEntry = validApertureEntries.reduce((max, current) => 
+        current.focalLength > max.focalLength ? current : max,
+        validApertureEntries[0] || { focalLength: 0, aperture: 0 }
+      );
 
       // Process each data entry
       const processedLensData = lens.data.map(entry => {
-        // If magnification is -1, calculate it
-        if (entry.magnification === -1) {
+        let updatedEntry = { ...entry };
+
+        // Calculate magnification if set to -1
+        if (entry.magnification === -1 && maxMagnificationEntry.magnification > 0) {
           const calculatedMagnification = this.lensService.calculateMagnification(
             entry.focalLength,
             entry.minFocus,
@@ -46,13 +54,24 @@ export class LensDataService {
             maxMagnificationEntry.magnification
           );
           
-          return {
-            ...entry,
-            magnification: calculatedMagnification
-          };
+          updatedEntry.magnification = calculatedMagnification;
+        }
+
+        // Calculate aperture if set to -1 (for zoom lenses)
+        if (entry.aperture === -1 && validApertureEntries.length >= 2 && 
+            minFocalLengthEntry.focalLength !== maxFocalLengthEntry.focalLength) {
+          const calculatedAperture = this.lensService.calculateApertureAtFocalLength(
+            entry.focalLength,
+            minFocalLengthEntry.focalLength,
+            maxFocalLengthEntry.focalLength,
+            minFocalLengthEntry.aperture,
+            maxFocalLengthEntry.aperture
+          );
+          
+          updatedEntry.aperture = calculatedAperture;
         }
         
-        return entry;
+        return updatedEntry;
       });
 
       return {
