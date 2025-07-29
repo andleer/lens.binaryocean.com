@@ -1,17 +1,68 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { LensData, Lens } from '../contracts/lens.interface';
 import lensDataJson from '../assets/lens-data.json';
+import { LensService } from './lens.calculations';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LensDataService {
-  // Signal to hold the lens data - initialized directly with imported data
-  private readonly _lensData = signal<LensData>(lensDataJson);
+  // Signal to hold the lens data - initialized with empty array, populated in constructor
+  private readonly _lensData = signal<LensData>([]);
+
+  constructor(private lensService: LensService) {
+    this.loadData();
+  }
 
   // Public readonly signal
   readonly lensData = this._lensData.asReadonly();
+
+  private loadData(): void {
+    // Process lens data to calculate magnifications where set to -1
+    const processedData = lensDataJson.map(lens => {
+      // Find the maximum magnification value for this lens (reference point)
+      const maxMagnificationEntry = lens.data
+        .filter(entry => entry.magnification > 0)
+        .reduce((max, current) => 
+          current.magnification > max.magnification ? current : max, 
+          { magnification: 0, focalLength: 0, aperture: 0, minFocus: 0 }
+        );
+
+      // If no positive magnification found, return lens as-is
+      if (maxMagnificationEntry.magnification === 0) {
+        return lens;
+      }
+
+      // Process each data entry
+      const processedLensData = lens.data.map(entry => {
+        // If magnification is -1, calculate it
+        if (entry.magnification === -1) {
+          const calculatedMagnification = this.lensService.calculateMagnification(
+            entry.focalLength,
+            entry.minFocus,
+            maxMagnificationEntry.focalLength,
+            maxMagnificationEntry.minFocus,
+            maxMagnificationEntry.magnification
+          );
+          
+          return {
+            ...entry,
+            magnification: calculatedMagnification
+          };
+        }
+        
+        return entry;
+      });
+
+      return {
+        ...lens,
+        data: processedLensData
+      };
+    });
+
+    this._lensData.set(processedData);
+  }
 
   // Computed signals for filtered data
   readonly manufacturers = computed(() => {
