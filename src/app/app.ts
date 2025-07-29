@@ -2,7 +2,7 @@ import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LensDataService } from '../services/lens-data.service';
-import { LensService } from '../services/lens.service';
+import { LensService } from '../services/lens.calculations';
 import { LensFiltersComponent, FilterCriteria } from './components/lens-filters/lens-filters.component';
 import { LensListComponent } from './components/lens-list/lens-list.component';
 import { LensDetailsComponent } from './components/lens-details/lens-details.component';
