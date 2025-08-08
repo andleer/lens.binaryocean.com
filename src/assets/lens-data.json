@@ -330,6 +330,21 @@
     ]
   },
   {
+    "id": 1015,
+    "manufacturer": "Nikon",
+    "model": "Z 800mm f/6.3 VR S PF",
+    "mount": "Z Mount",
+    "teleconverter": true,
+    "data": [
+      {
+        "focalLength": 800,
+        "aperture": 6.3,
+        "minFocus": 5.0,
+        "magnification": 0.16
+      }
+    ]
+  },
+  {
     "id": 3000,
     "manufacturer": "Sony",
     "model": "FE 90mm f/2.8 Macro G OSS",
