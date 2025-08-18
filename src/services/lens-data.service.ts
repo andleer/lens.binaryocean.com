@@ -152,7 +152,8 @@ export class LensDataService {
 
         // Filter by teleconverter compatibility
         if (criteria.teleconverterCompatible !== undefined) {
-          if (lens.teleconverter !== criteria.teleconverterCompatible) return false;
+          const hasTC = lens.teleconverters.length > 0;
+          if (hasTC !== criteria.teleconverterCompatible) return false;
         }
 
         return true;

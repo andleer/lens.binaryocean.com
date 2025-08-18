@@ -4,7 +4,7 @@
     "manufacturer": "Nikon",
     "model": "Z 100-400mm f/4.5-5.6 VR S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 100,
@@ -43,7 +43,7 @@
     "manufacturer": "Nikon",
     "model": "Z 70-200mm f/2.8 VR S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 70,
@@ -82,7 +82,7 @@
     "manufacturer": "Nikon",
     "model": "Z 105mm f/2.8 VR S",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 105,
@@ -97,7 +97,7 @@
     "manufacturer": "Nikon",
     "model": "Z 600mm f/6.3 VR S PF",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 600,
@@ -112,7 +112,7 @@
     "manufacturer": "Nikon",
     "model": "Z 50mm f/2.8 Macro",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 50,
@@ -127,7 +127,7 @@
     "manufacturer": "Nikon",
     "model": "Z 180-600mm f/5.6-6.3 VR",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 180,
@@ -172,7 +172,7 @@
     "manufacturer": "Nikon",
     "model": "Z 400mm f/4.5 VR S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 400,
@@ -187,7 +187,7 @@
     "manufacturer": "Nikon",
     "model": "Z 50mm f/1.8 S",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 50,
@@ -202,7 +202,7 @@
     "manufacturer": "Nikon",
     "model": "Z 70-180mm f/2.8",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 70,
@@ -223,7 +223,7 @@
     "manufacturer": "Nikon",
     "model": "Z 24-120mm f/4 S",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 24,
@@ -274,7 +274,7 @@
     "manufacturer": "Nikon",
     "model": "Z 40mm f/2",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 40,
@@ -289,7 +289,7 @@
     "manufacturer": "Nikon",
     "model": "Z 600mm f/4 TC VR S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 600,
@@ -304,7 +304,7 @@
     "manufacturer": "Nikon",
     "model": "Z 400mm f/2.8 TC VR S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 400,
@@ -319,7 +319,7 @@
     "manufacturer": "Nikon",
     "model": "Z 85mm f/1.8 S",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 85,
@@ -334,7 +334,7 @@
     "manufacturer": "Nikon",
     "model": "Z 800mm f/6.3 VR S PF",
     "mount": "Z Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 800,
@@ -349,7 +349,7 @@
     "manufacturer": "Sony",
     "model": "FE 90mm f/2.8 Macro G OSS",
     "mount": "E Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 90,
@@ -364,7 +364,7 @@
     "manufacturer": "Sony",
     "model": "FE 50mm f/2.8 Macro",
     "mount": "E Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 50,
@@ -379,7 +379,7 @@
     "manufacturer": "Sony",
     "model": "FE 70-200mm f/2.8 Macro G OSS II",
     "mount": "E Mount",
-    "teleconverter": true,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 70,
@@ -400,7 +400,7 @@
     "manufacturer": "Sony",
     "model": "FE 35mm f/1.8",
     "mount": "E Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 35,
@@ -415,7 +415,7 @@
     "manufacturer": "Canon",
     "model": "RF 100mm f/2.8L Macro IS USM",
     "mount": "RF Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 100,
@@ -430,7 +430,7 @@
     "manufacturer": "Canon",
     "model": "RF 85mm f/2 Macro IS STM",
     "mount": "RF Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 85,
@@ -445,7 +445,7 @@
     "manufacturer": "Canon",
     "model": "RF 100-500mm f/4.5-7.1L IS USM",
     "mount": "RF Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 100,
@@ -466,7 +466,7 @@
     "manufacturer": "Canon",
     "model": "RF 70-200mm f/2.8L IS USM",
     "mount": "RF Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 70,
@@ -487,7 +487,7 @@
     "manufacturer": "Canon",
     "model": "RF 100-400mm f/5.6-8L IS USM",
     "mount": "RF Mount",
-    "teleconverter": true,
+    "teleconverters": [1.4, 2.0],
     "data": [
       {
         "focalLength": 100,
@@ -508,7 +508,7 @@
     "manufacturer": "Tamron",
     "model": "70-180mm f/2.8 Di III VXD",
     "mount": "Z Mount",
-    "teleconverter": false,
+    "teleconverters": [],
     "data": [
       {
         "focalLength": 70,

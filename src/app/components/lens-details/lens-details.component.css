@@ -53,15 +53,51 @@
 
 .spec-header-controls {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 16px;
+}
+
+.spec-header-controls h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .max-mag-filter {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.teleconverter-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.control-label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.teleconverter-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -82,7 +118,7 @@
 
 .spec-header, .spec-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 60px 1fr 1fr 1fr 1fr;
   gap: 12px;
   padding: 8px 16px;
   align-items: center;
@@ -94,6 +130,20 @@
   border-bottom: 1px solid #d1d5db;
   color: #374151;
   font-size: 14px;
+}
+
+.spec-header .sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: -4px -8px;
+}
+
+.spec-header .sortable:hover {
+  background-color: #e5e7eb;
+  color: #111827;
 }
 
 .spec-row {

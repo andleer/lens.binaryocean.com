@@ -11,8 +11,7 @@ export interface Lens {
   manufacturer: string;
   model: string;
   mount: string;
-  teleconverter: boolean;
-  teleconverterTypes?: string[]; // ["1.4x", "2x"] - available teleconverters
+  teleconverters: number[]; // [1.4, 2.0] - available teleconverter multipliers
   data: LensSpecification[];
 }
 

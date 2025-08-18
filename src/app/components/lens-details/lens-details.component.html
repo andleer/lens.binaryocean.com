@@ -5,34 +5,59 @@
       <div class="specifications">
         <div class="spec-header-controls">
           <h3>Specifications ({{ selectedLenses().length }} lens{{ selectedLenses().length > 1 ? 'es' : '' }} selected)</h3>
-          <label class="max-mag-filter">
-            <input 
-              type="checkbox" 
-              [(ngModel)]="showMaxMagOnly"
-              class="filter-checkbox">
-            Show Max Mag Only
-          </label>
+          <div class="controls-row">
+            <label class="max-mag-filter">
+              <input 
+                type="checkbox" 
+                [(ngModel)]="showMaxMagOnly"
+                class="filter-checkbox">
+              Show Max Mag Only
+            </label>
+            @if (availableTeleconverters().length > 0) {
+              <div class="teleconverter-controls">
+                <span class="control-label">Teleconverters:</span>
+                @for (tc of availableTeleconverters(); track tc) {
+                  <label class="teleconverter-filter">
+                    <input 
+                      type="checkbox" 
+                      [checked]="isTeleconverterSelected(tc)"
+                      (change)="toggleTeleconverter(tc)"
+                      class="filter-checkbox">
+                    {{ tc }}×
+                  </label>
+                }
+              </div>
+            }
+          </div>
         </div>
         <div class="spec-table">
           <div class="spec-header">
             <div>Manufacturer</div>
             <div>Model</div>
-            <div>Focal Length</div>
-            <div>Max Aperture</div>
-            <div>Min Focus</div>
-            <div>Magnification</div>
+            <div>TC</div>
+            <div class="sortable" (click)="sortBy('focalLength')">
+              Focal Length {{ getSortIcon('focalLength') }}
+            </div>
+            <div class="sortable" (click)="sortBy('aperture')">
+              Max Aperture {{ getSortIcon('aperture') }}
+            </div>
+            <div class="sortable" (click)="sortBy('minFocus')">
+              Min Focus {{ getSortIcon('minFocus') }}
+            </div>
+            <div class="sortable" (click)="sortBy('magnification')">
+              Magnification {{ getSortIcon('magnification') }}
+            </div>
           </div>
-          @for (lens of selectedLenses(); track lens.id) {
-            @for (data of getFilteredDataForLens(lens); track $index) {
-              <div class="spec-row">
-                <div class="spec-data">{{ lens.manufacturer }}</div> 
-                <div class="spec-data">{{ lens.model }}</div>
-                <div class="spec-data">{{ data.focalLength }}mm</div>
-                <div class="spec-data">f/{{ data.aperture.toFixed(1) }}</div>
-                <div class="spec-data">{{ data.minFocus.toFixed(2) }}m</div>
-                <div class="spec-data">{{ data.magnification | number:'1.2-2' }}×</div>
-              </div>
-            }
+          @for (item of sortedLensData(); track item.lens.id + '_' + item.data.focalLength + '_' + (item.teleconverter || 'base')) {
+            <div class="spec-row">
+              <div class="spec-data">{{ item.lens.manufacturer }}</div> 
+              <div class="spec-data">{{ item.lens.model }}</div>
+              <div class="spec-data">{{ item.teleconverter ? item.teleconverter + '×' : '—' }}</div>
+              <div class="spec-data">{{ item.data.focalLength }}mm</div>
+              <div class="spec-data">f/{{ item.data.aperture.toFixed(1) }}</div>
+              <div class="spec-data">{{ item.data.minFocus.toFixed(2) }}m</div>
+              <div class="spec-data">{{ item.data.magnification | number:'1.2-2' }}×</div>
+            </div>
           }
         </div>
       </div>
