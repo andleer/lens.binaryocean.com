@@ -1,26 +1,38 @@
 <section class="lens-list-section">
-
+  <h2>Lenses</h2>
   @if (selectedLenses().length > 0) {
     <div class="selection-info">
       <span>{{ selectedLenses().length }} selected</span>
       <button class="clear-selection" (click)="lensesSelected.emit([])">Clear Selection</button>
     </div>
   }
-  <div class="lens-cards">
-    @for (lens of lenses(); track lens.model) {
-      <div 
-        class="lens-card" 
-        [class.selected]="isLensSelected(lens)"
-        (click)="onLensClick(lens)">
-        <div class="lens-card-header">
-          <span>{{ lens.manufacturer }} {{ lens.model }}</span>
+  
+  @if (lenses().length > 0) {
+    <div class="lens-table">
+      <div class="lens-header">
+        <div>Manufacturer</div>
+        <div>Model</div>
+        <div>Mount</div>
+        <div>TC Compatible</div>
+      </div>
+      @for (lens of lenses(); track lens.model) {
+        <div 
+          class="lens-row" 
+          [class.selected]="isLensSelected(lens)"
+          (click)="onLensClick(lens)">
+          <div class="lens-data">{{ lens.manufacturer }}</div>
+          <div class="lens-data">{{ lens.model }}</div>
+          <div class="lens-data">{{ lens.mount }}</div>
+          <div class="lens-data">{{ lens.teleconverter ? 'Yes' : 'No' }}</div>
         </div>
+      }
+    </div>
+  } @else {
+    <div class="no-selection">
+      <div class="placeholder">
+        <h3>No lenses match your filter criteria</h3>
+        <p>Select manufacturers or mounts from the filters above to see available lenses.</p>
       </div>
-    }
-    @if (lenses().length === 0) {
-      <div class="no-results">
-        <p>No lenses match your filter criteria.</p>
-      </div>
-    }
-  </div>
+    </div>
+  }
 </section>
