@@ -1,12 +1,13 @@
-import { Component, input, inject, ElementRef, effect } from '@angular/core';
+import { Component, input, inject, ElementRef, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Lens } from '../../../contracts/lens.interface';
 import { LensService } from '../../../services/lens-calculations-service';
 
 @Component({
   selector: 'app-lens-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './lens-details.component.html',
   styleUrl: './lens-details.component.css'
 })
@@ -16,6 +17,9 @@ export class LensDetailsComponent {
   
   // Input properties
   selectedLenses = input<Lens[]>([]);
+  
+  // Filter state
+  showMaxMagOnly = signal<boolean>(false);
 
   constructor() {
     // Update CSS custom property when selected lenses change
@@ -46,6 +50,15 @@ export class LensDetailsComponent {
   // Helper method to get data for a specific lens at a specific focal length
   getLensDataAtFocalLength(lens: Lens, focalLength: number) {
     return lens.data.find(data => data.focalLength === focalLength);
+  }
+
+  // Get filtered data for a lens based on the max magnification filter
+  getFilteredDataForLens(lens: Lens) {
+    if (this.showMaxMagOnly()) {
+      const maxMagData = this.lensService.getMaxMagnificationWithFocalLength(lens);
+      return lens.data.filter(data => data.focalLength === maxMagData.focalLength);
+    }
+    return lens.data;
   }
 
   // Helper method to find the lens with the best magnification at a specific focal length

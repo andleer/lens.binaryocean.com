@@ -1,117 +1,38 @@
 <section class="lens-details-section">
-  @if (selectedLenses().length === 1) {
-    <!-- Single lens details -->
-    @let lens = selectedLenses()[0];
+  @if (selectedLenses().length > 0) {
+    <!-- Multiple lens details -->
     <div class="lens-details">
-      <div class="details-header">
-        <h2>{{ lens.model }}</h2>
-        <div class="lens-badges">
-          <span class="badge">{{ lens.manufacturer }}</span>
-          <span class="badge">{{ lens.mount }}</span>
-          @if (lens.teleconverter) {
-            <span class="badge">TC</span>
-          }
-        </div>
-      </div>
-
       <div class="specifications">
-        <h3>Specifications</h3>
+        <div class="spec-header-controls">
+          <h3>Specifications ({{ selectedLenses().length }} lens{{ selectedLenses().length > 1 ? 'es' : '' }} selected)</h3>
+          <label class="max-mag-filter">
+            <input 
+              type="checkbox" 
+              [(ngModel)]="showMaxMagOnly"
+              class="filter-checkbox">
+            Show Max Mag Only
+          </label>
+        </div>
         <div class="spec-table">
           <div class="spec-header">
+            <div>Manufacturer</div>
+            <div>Model</div>
             <div>Focal Length</div>
             <div>Max Aperture</div>
             <div>Min Focus</div>
             <div>Magnification</div>
           </div>
-          @for (data of lens.data; track $index) {
-            <div class="spec-row">
-              <div class="focal-length">{{ data.focalLength }}mm</div>
-              <div class="aperture">f/{{ data.aperture.toFixed(1) }}</div>
-              <div class="min-focus">{{ data.minFocus.toFixed(2) }}m</div>
-              <div class="magnification">{{ data.magnification | number:'1.2-2' }}×</div>
-            </div>
-          }
-        </div>
-      </div>
-
-      @if (lens.data.length > 1) {
-        <div class="focal-range-info">
-          <h4>Focal Range Summary</h4>
-          <div class="range-stats">
-            <div>
-              <strong>Focal Length:</strong> 
-              {{ lens.data[0].focalLength }}mm - {{ lens.data[lens.data.length - 1].focalLength }}mm
-            </div>
-            <div>
-              <strong>Best Magnification:</strong> 
-              {{ getMaxMagnificationWithFocalLength(lens).magnification | number:'1.2-2' }}× at {{ getMaxMagnificationWithFocalLength(lens).focalLength }}mm
-            </div>
-          </div>
-        </div>
-      }
-    </div>
-  } @else if (selectedLenses().length > 1) {
-    <!-- Multiple lens comparison -->
-    <div class="lens-comparison">
-      <div class="comparison-header">
-        <h2>Lens Comparison ({{ selectedLenses().length }} lenses)</h2>
-        <div class="compared-lenses">
-          @for (lens of selectedLenses(); track lens.model) {
-            <div class="comparison-badge">
-              <span class="lens-name">{{ lens.manufacturer }} {{ lens.model }}</span>
-              <span class="lens-mount">{{ lens.mount }}</span>
-            </div>
-          }
-        </div>
-      </div>
-
-      <div class="comparison-table-container">
-        <h3>Specifications Comparison</h3>
-        <div class="comparison-table">
-          <!-- Header row with lens names -->
-          <div class="comparison-header-row">
-            <div class="focal-length-header">Focal Length</div>
-            @for (lens of selectedLenses(); track lens.model) {
-              <div class="lens-column-header">
-                <div class="lens-name">{{ lens.manufacturer }}</div>
-                <div class="lens-model">{{ lens.model }}</div>
+          @for (lens of selectedLenses(); track lens.id) {
+            @for (data of getFilteredDataForLens(lens); track $index) {
+              <div class="spec-row">
+                <div class="spec-data">{{ lens.manufacturer }}</div> 
+                <div class="spec-data">{{ lens.model }}</div>
+                <div class="spec-data">{{ data.focalLength }}mm</div>
+                <div class="spec-data">f/{{ data.aperture.toFixed(1) }}</div>
+                <div class="spec-data">{{ data.minFocus.toFixed(2) }}m</div>
+                <div class="spec-data">{{ data.magnification | number:'1.2-2' }}×</div>
               </div>
             }
-          </div>
-
-          <!-- Data rows for each focal length -->
-          @for (focalLength of getAllFocalLengths(); track focalLength) {
-            <div class="comparison-row">
-              <div class="focal-length-cell">{{ focalLength }}mm</div>
-              @for (lens of selectedLenses(); track lens.model) {
-                @let lensData = getLensDataAtFocalLength(lens, focalLength);
-                <div class="lens-data-cell" 
-                     [class.best-magnification]="lensData && isBestMagnificationAtFocalLength(lens, focalLength)">
-                  @if (lensData) {
-                    <div class="aperture">f/{{ lensData.aperture.toFixed(1) }}</div>
-                    <div class="min-focus">{{ lensData.minFocus.toFixed(2) }}m</div>
-                    <div class="magnification">{{ lensData.magnification | number:'1.2-2' }}×</div>
-                  } @else {
-                    <div class="no-data">—</div>
-                    <div class="no-data">—</div>
-                    <div class="no-data">—</div>
-                  }
-                </div>
-              }
-            </div>
-          }
-        </div>
-      </div>
-
-      <!-- Comparison summary -->
-      <div class="comparison-summary">
-        <h4>Best Performance Summary</h4>
-        <div class="summary-stats">
-          @for (lens of selectedLenses(); track lens.model) {
-            <div class="lens-summary">
-              <strong>{{ lens.manufacturer }} {{ lens.model }}:</strong>
-              <span>Best magnification {{ getMaxMagnificationWithFocalLength(lens).magnification | number:'1.2-2' }}× at {{ getMaxMagnificationWithFocalLength(lens).focalLength }}mm</span>
-            </div>
           }
         </div>
       </div>

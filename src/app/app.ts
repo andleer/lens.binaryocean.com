@@ -26,21 +26,16 @@ export class App {
   selectedLenses = signal<Lens[]>([]);
 
   constructor() {
-    // Initialize filtered lenses with all lenses, sorted by max focal length
-    const sortedLenses = [...this.lenses()].sort((a, b) => {
-      const maxFocalA = this.lensService.getMaxFocalLength(a);
-      const maxFocalB = this.lensService.getMaxFocalLength(b);
-      return maxFocalA - maxFocalB;
-    });
-    this.filteredLenses.set(sortedLenses);
+    // Initialize with empty filtered lenses - user must select filters first
+    this.filteredLenses.set([]);
   }
   
   onFiltersChanged(criteria: FilterCriteria) {
     let filteredLenses: Lens[];
     
-    // If no filters are applied, show all lenses
+    // If no filters are applied, show empty list
     if (criteria.manufacturers.length === 0 && criteria.mounts.length === 0) {
-      filteredLenses = [...this.lenses()];
+      filteredLenses = [];
     } else {
       // Use the service's filterLenses method
       const serviceCriteria: any = {};
@@ -54,15 +49,22 @@ export class App {
       filteredLenses = [...filteredSignal()];
     }
     
-    // Sort by maximum focal length (ascending order)
-    filteredLenses.sort((a, b) => {
-      const maxFocalA = this.lensService.getMaxFocalLength(a);
-      const maxFocalB = this.lensService.getMaxFocalLength(b);
-      return maxFocalA - maxFocalB;
-    });
+    // Sort by maximum focal length (ascending order) only if there are lenses
+    if (filteredLenses.length > 0) {
+      filteredLenses.sort((a, b) => {
+        const maxFocalA = this.lensService.getMaxFocalLength(a);
+        const maxFocalB = this.lensService.getMaxFocalLength(b);
+        return maxFocalA - maxFocalB;
+      });
+    }
     
     this.filteredLenses.set(filteredLenses);
-    this.selectedLenses.set([]);
+    
+    // Only keep selected lenses that are still in the filtered results
+    const currentSelected = this.selectedLenses();
+    const filteredIds = new Set(filteredLenses.map(lens => lens.id));
+    const updatedSelected = currentSelected.filter(lens => filteredIds.has(lens.id));
+    this.selectedLenses.set(updatedSelected);
   }
   
   onLensesSelected(lenses: Lens[]) {
