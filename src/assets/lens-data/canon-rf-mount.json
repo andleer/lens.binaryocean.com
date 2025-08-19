@@ -1,95 +1,89 @@
-[
-  {
-    "id": 5000,
-    "manufacturer": "Canon",
-    "model": "RF 100mm f/2.8L Macro IS USM",
-    "mount": "Canon RF",
-    "teleconverters": [],
-    "data": [
-      {
-        "focalLength": 100,
-        "aperture": 2.8,
-        "minFocus": 0.26,
-        "magnification": 1.4
-      }
-    ]
-  },
-  {
-    "id": 5001,
-    "manufacturer": "Canon",
-    "model": "RF 85mm f/2 Macro IS STM",
-    "mount": "Canon RF",
-    "teleconverters": [],
-    "data": [
-      {
-        "focalLength": 85,
-        "aperture": 2.0,
-        "minFocus": 0.35,
-        "magnification": 0.5
-      }
-    ]
-  },
-  {
-    "id": 5002,
-    "manufacturer": "Canon",
-    "model": "RF 100-500mm f/4.5-7.1L IS USM",
-    "mount": "Canon RF",
-    "teleconverters": [],
-    "data": [
-      {
-        "focalLength": 100,
-        "aperture": 4.5,
-        "minFocus": 1.2,
-        "magnification": 0.09
-      },
-      {
-        "focalLength": 500,
-        "aperture": 7.1,
-        "minFocus": 1.2,
-        "magnification": 0.33
-      }
-    ]
-  },
-  {
-    "id": 5003,
-    "manufacturer": "Canon",
-    "model": "RF 70-200mm f/2.8L IS USM",
-    "mount": "Canon RF",
-    "teleconverters": [],
-    "data": [
-      {
-        "focalLength": 70,
-        "aperture": 2.8,
-        "minFocus": 0.7,
-        "magnification": 0.23
-      },
-      {
-        "focalLength": 200,
-        "aperture": 2.8,
-        "minFocus": 0.7,
-        "magnification": 0.23
-      }
-    ]
-  },
-  {
-    "id": 5004,
-    "manufacturer": "Canon",
-    "model": "RF 100-400mm f/5.6-8L IS USM",
-    "mount": "Canon RF",
-    "teleconverters": [],
-    "data": [
-      {
-        "focalLength": 100,
-        "aperture": 5.6,
-        "minFocus": 1.2,
-        "magnification": 0.12
-      },
-      {
-        "focalLength": 400,
-        "aperture": 8.0,
-        "minFocus": 1.05,
-        "magnification": 0.41
-      }
-    ]
-  }
-]
+{
+  "manufacturer": "Canon",
+  "mount": "Canon RF",
+  "lenses": [
+    {
+      "id": 3000,
+      "model": "RF 100mm f/2.8L Macro IS USM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 100,
+          "aperture": 2.8,
+          "minFocus": 0.26,
+          "magnification": 1.4
+        }
+      ]
+    },
+    {
+      "id": 3001,
+      "model": "RF 85mm f/2 Macro IS STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 85,
+          "aperture": 2.0,
+          "minFocus": 0.35,
+          "magnification": 0.5
+        }
+      ]
+    },
+    {
+      "id": 3002,
+      "model": "RF 100-500mm f/4.5-7.1L IS USM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 100,
+          "aperture": 4.5,
+          "minFocus": 1.2,
+          "magnification": 0.09
+        },
+        {
+          "focalLength": 500,
+          "aperture": 7.1,
+          "minFocus": 1.2,
+          "magnification": 0.33
+        }
+      ]
+    },
+    {
+      "id": 3003,
+      "model": "RF 70-200mm f/2.8L IS USM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 70,
+          "aperture": 2.8,
+          "minFocus": 0.7,
+          "magnification": 0.23
+        },
+        {
+          "focalLength": 200,
+          "aperture": 2.8,
+          "minFocus": 0.7,
+          "magnification": 0.23
+        }
+      ]
+    },
+    {
+      "id": 3004,
+      "model": "RF 100-400mm f/5.6-8L IS USM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 100,
+          "aperture": 5.6,
+          "minFocus": 1.2,
+          "magnification": 0.12
+        },
+        {
+          "focalLength": 400,
+          "aperture": 8.0,
+          "minFocus": 1.05,
+          "magnification": 0.41
+        }
+      ]
+    }
+  ]
+}

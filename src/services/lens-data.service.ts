@@ -6,6 +6,7 @@ import { LensService } from './lens.calculations';
 import nikonZLenses from '../assets/lens-data/nikon-z-mount.json';
 import sonyELenses from '../assets/lens-data/sony-e-mount.json';
 import canonRFLenses from '../assets/lens-data/canon-rf-mount.json';
+import tamronZLenses from '../assets/lens-data/tamron-z-mount.json';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +23,28 @@ export class LensDataService {
   readonly lensData = this._lensData.asReadonly();
 
   private loadData(): void {
-    // Combine all lens data from different files
+    // Extract lens data from the new structured files and add manufacturer/mount info
     const allLensData = [
-      ...nikonZLenses,
-      ...sonyELenses,
-      ...canonRFLenses
+      ...nikonZLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: nikonZLenses.manufacturer,
+        mount: nikonZLenses.mount
+      })),
+      ...sonyELenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: sonyELenses.manufacturer,
+        mount: sonyELenses.mount
+      })),
+      ...canonRFLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: canonRFLenses.manufacturer,
+        mount: canonRFLenses.mount
+      })),
+      ...tamronZLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: tamronZLenses.manufacturer,
+        mount: tamronZLenses.mount
+      }))
     ];
 
     // Process lens data to calculate magnifications where set to -1
