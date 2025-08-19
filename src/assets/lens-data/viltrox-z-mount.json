@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Viltrox",
+  "mount": "Nikon Z",
+  "lenses": [
+    {
+      "id": 5000,
+      "model": "AF 85mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 85,
+          "aperture": 1.8,
+          "minFocus": 0.8,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 5001,
+      "model": "AF 100mm f/2.8 Macro",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 100,
+          "aperture": 2.8,
+          "minFocus": 0.3,
+          "magnification": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5002,
+      "model": "AF 20mm f/2.8 Pancake",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 20,
+          "aperture": 2.8,
+          "minFocus": 0.2,
+          "magnification": 0.06
+        }
+      ]
+    },
+    {
+      "id": 5003,
+      "model": "AF 24mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 1.8,
+          "minFocus": 0.35,
+          "magnification": 0.08
+        }
+      ]
+    },
+    {
+      "id": 5004,
+      "model": "AF 35mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 35,
+          "aperture": 1.8,
+          "minFocus": 0.35,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 5005,
+      "model": "AF 50mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 1.8,
+          "minFocus": 0.45,
+          "magnification": 0.15
+        }
+      ]
+    }
+  ]
+}

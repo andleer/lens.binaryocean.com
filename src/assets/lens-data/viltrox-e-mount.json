@@ -1,0 +1,175 @@
+{
+  "manufacturer": "Viltrox",
+  "mount": "Sony E",
+  "lenses": [
+    {
+      "id": 6000,
+      "model": "AF 13mm f/1.4 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 13,
+          "aperture": 1.4,
+          "minFocus": 0.22,
+          "magnification": 0.04
+        }
+      ]
+    },
+    {
+      "id": 6001,
+      "model": "AF 20mm f/2.8 Pancake",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 20,
+          "aperture": 2.8,
+          "minFocus": 0.2,
+          "magnification": 0.06
+        }
+      ]
+    },
+    {
+      "id": 6002,
+      "model": "AF 23mm f/1.4 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 23,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 6003,
+      "model": "AF 24mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 1.8,
+          "minFocus": 0.35,
+          "magnification": 0.08
+        }
+      ]
+    },
+    {
+      "id": 6004,
+      "model": "AF 28mm f/4.5 Macro",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 28,
+          "aperture": 4.5,
+          "minFocus": 0.094,
+          "magnification": 2.0
+        }
+      ]
+    },
+    {
+      "id": 6005,
+      "model": "AF 33mm f/1.4 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 33,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 6006,
+      "model": "AF 40mm f/2.5 Close Focus",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 40,
+          "aperture": 2.5,
+          "minFocus": 0.2,
+          "magnification": 0.25
+        }
+      ]
+    },
+    {
+      "id": 6007,
+      "model": "AF 56mm f/1.4 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 56,
+          "aperture": 1.4,
+          "minFocus": 0.4,
+          "magnification": 0.15
+        }
+      ]
+    },
+    {
+      "id": 6008,
+      "model": "AF 56mm f/1.7 Close Focus",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 56,
+          "aperture": 1.7,
+          "minFocus": 0.25,
+          "magnification": 0.4
+        }
+      ]
+    },
+    {
+      "id": 6009,
+      "model": "AF 75mm f/1.2 Pro",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 75,
+          "aperture": 1.2,
+          "minFocus": 0.73,
+          "magnification": 0.11
+        }
+      ]
+    },
+    {
+      "id": 6010,
+      "model": "AF 85mm f/1.8 STM",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 85,
+          "aperture": 1.8,
+          "minFocus": 0.8,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 6011,
+      "model": "AF 100mm f/2.8 Macro",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 100,
+          "aperture": 2.8,
+          "minFocus": 0.3,
+          "magnification": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6012,
+      "model": "AF 135mm f/1.8 LAB",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 135,
+          "aperture": 1.8,
+          "minFocus": 0.8,
+          "magnification": 0.25
+        }
+      ]
+    }
+  ]
+}

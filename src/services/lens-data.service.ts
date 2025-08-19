@@ -7,6 +7,11 @@ import nikonZLenses from '../assets/lens-data/nikon-z-mount.json';
 import sonyELenses from '../assets/lens-data/sony-e-mount.json';
 import canonRFLenses from '../assets/lens-data/canon-rf-mount.json';
 import tamronZLenses from '../assets/lens-data/tamron-z-mount.json';
+import tamronELenses from '../assets/lens-data/tamron-e-mount.json';
+import tamronRFLenses from '../assets/lens-data/tamron-rf-mount.json';
+import viltroxZLenses from '../assets/lens-data/viltrox-z-mount.json';
+import viltroxRFLenses from '../assets/lens-data/viltrox-rf-mount.json';
+import viltroxELenses from '../assets/lens-data/viltrox-e-mount.json';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +49,31 @@ export class LensDataService {
         ...lens,
         manufacturer: tamronZLenses.manufacturer,
         mount: tamronZLenses.mount
+      })),
+      ...tamronELenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: tamronELenses.manufacturer,
+        mount: tamronELenses.mount
+      })),
+      ...tamronRFLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: tamronRFLenses.manufacturer,
+        mount: tamronRFLenses.mount
+      })),
+      ...viltroxZLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: viltroxZLenses.manufacturer,
+        mount: viltroxZLenses.mount
+      })),
+      ...viltroxRFLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: viltroxRFLenses.manufacturer,
+        mount: viltroxRFLenses.mount
+      })),
+      ...viltroxELenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: viltroxELenses.manufacturer,
+        mount: viltroxELenses.mount
       }))
     ];
 

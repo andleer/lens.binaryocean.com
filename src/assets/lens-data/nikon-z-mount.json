@@ -243,25 +243,6 @@
           "magnification": 0.15
         }
       ]
-    },
-    {
-      "id": 1014,
-      "model": "Z 14-24mm f/2.8 S",
-      "teleconverters": [],
-      "data": [
-        {
-          "focalLength": 14,
-          "aperture": 2.8,
-          "minFocus": 0.28,
-          "magnification": 0.13
-        },
-        {
-          "focalLength": 24,
-          "aperture": 2.8,
-          "minFocus": 0.28,
-          "magnification": 0.12
-        }
-      ]
     }
   ]
 }
