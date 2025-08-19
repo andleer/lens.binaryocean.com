@@ -1,0 +1,454 @@
+[
+{
+    "id": 1001,
+    "manufacturer": "Nikon",
+    "model": "Z 100-400mm f/4.5-5.6 VR S",   
+    "mount": "Nikon Z",
+    "teleconverters": [1.4, 2.0],
+    "data": [
+        {
+            "focalLength": 100,
+            "aperture": 4.5,
+            "minFocus": 0.75,
+            "magnification": 0.23
+        },
+        {
+            "focalLength": 135,
+            "aperture": 4.8,
+            "minFocus": 0.82,
+            "magnification": 0.27
+        },
+        {
+            "focalLength": 200,
+            "aperture": 5.0,
+            "minFocus": 0.86,
+            "magnification": 0.30
+        },
+        {
+            "focalLength": 300,
+            "aperture": 5.3,
+            "minFocus": 0.92,
+            "magnification": 0.34
+        },
+        {
+            "focalLength": 400,
+            "aperture": 5.6,
+            "minFocus": 0.98,
+            "magnification": 0.38
+        }
+    ]
+},
+    {
+        "id": 1017,
+        "manufacturer": "Nikon",
+        "model": "Z 85mm f/1.8 S",
+        "mount": "Nikon Z",
+        "teleconverters": [],
+        "data": [
+            {
+                "focalLength": 85,
+                "aperture": 1.8,
+                "minFocus": 0.80,
+                "magnification": 0.12
+            }
+        ]
+},
+{
+    "id": 1003,
+    "manufacturer": "Nikon",
+    "model": "Z 70-200mm f/2.8 VR S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 70,
+            "aperture": 2.8,
+            "minFocus": 0.55,
+            "magnification": 0.0
+        },
+        {
+            "focalLength": 85,
+            "aperture": 2.8,
+            "minFocus": 0.63,
+            "magnification": 0.0
+        },
+        {
+            "focalLength": 105,
+            "aperture": 2.8,
+            "minFocus": 0.68,
+            "magnification": 0.0
+        },
+        {
+            "focalLength": 135,
+            "aperture": 2.8,
+            "minFocus": 0.80,
+            "magnification": 0.0
+        },
+        {
+            "focalLength": 200,
+            "aperture": 2.8,
+            "minFocus": 1.0,
+            "magnification": 0.20
+        }
+    ]
+},
+{
+    "id": 1002,
+    "manufacturer": "Nikon",
+    "model": "Z 105mm f/2.8 VR S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 105,
+            "aperture": 2.8,
+            "minFocus": 0.29,
+            "magnification": 1.0
+        }
+    ]
+},
+{
+    "id": 1004,
+    "manufacturer": "Nikon",
+    "model": "Z 600mm f/6.3 VR S PF",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 600,
+            "aperture": 6.3,
+            "minFocus": 4.0,
+            "magnification": 0.15
+        }
+    ]
+},
+{
+    "id": 1005,
+    "manufacturer": "Nikon",
+    "model": "Z 50mm f/2.8 Macro",
+    "mount": "Nikon Z",
+
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 50,
+            "aperture": 2.8,
+            "minFocus": 0.16,
+            "magnification": 1.0
+        }
+    ]
+},
+{
+    "id": 1006,
+    "manufacturer": "Nikon",
+    "model": "Z 180-600mm f/5.6-6.3 VR",
+    "mount": "Nikon Z",
+
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 180,
+            "aperture": 5.6,
+            "minFocus": 1.3,
+            "magnification": 0.25
+        },
+        {
+            "focalLength": 600,
+            "aperture": 6.3,
+            "minFocus": 2.4,
+            "magnification": 0.25
+        }
+    ]
+},
+{
+    "id": 1007,
+    "manufacturer": "Nikon",
+    "model": "Z 400mm f/4.5 VR S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 400,
+            "aperture": 4.5,
+            "minFocus": 2.5,
+            "magnification": 0.16
+        }
+    ]
+},
+{
+    "id": 1008,
+    "manufacturer": "Nikon",
+    "model": "Z 50mm f/1.8 S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 50,
+            "aperture": 1.8,
+            "minFocus": 0.4,
+            "magnification": 0.15
+        }
+    ]
+},
+{
+    "id": 1009,
+    "manufacturer": "Nikon",
+    "model": "Z 70-180mm f/2.8",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 70,
+            "aperture": 2.8,
+            "minFocus": 0.27,
+            "magnification": 0.20
+        },
+        {
+            "focalLength": 180,
+            "aperture": 2.8,
+            "minFocus": 0.85,
+            "magnification": 0.27
+        }
+    ]
+},
+{
+    "id": 1000,
+    "manufacturer": "Nikon",
+    "model": "Z 24-120mm f/4 S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 24,
+            "aperture": 4.0,
+            "minFocus": 0.35,
+            "magnification": 0.16
+        },
+        {
+            "focalLength": 120,
+            "aperture": 4.0,
+            "minFocus": 0.60,
+            "magnification": 0.39
+        }
+    ]
+},
+{
+    "id": 1011,
+    "manufacturer": "Nikon",
+    "model": "Z 40mm f/2",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 40,
+            "aperture": 2.0,
+            "minFocus": 0.29,
+            "magnification": 0.17
+        }
+    ]
+},
+{
+    "id": 1012,
+    "manufacturer": "Nikon",
+    "model": "Z 600mm f/4 TC VR S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 600,
+            "aperture": 4.0,
+            "minFocus": 4.3,
+            "magnification": 0.14
+        }
+    ]
+},
+{
+    "id": 1013,
+    "manufacturer": "Nikon",
+    "model": "Z 400mm f/2.8 TC VR S",
+    "mount": "Nikon Z",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 400,
+            "aperture": 2.8,
+            "minFocus": 2.5,
+            "magnification": 0.23
+        }
+    ]
+},
+{
+    "id": 3000,
+    "manufacturer": "Sony",
+    "model": "FE 90mm f/2.8 Macro G OSS",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 90,
+            "aperture": 2.8,
+            "minFocus": 0.28,
+            "magnification": 1.0
+        }
+    ]
+},
+{
+    "id": 3001,
+    "manufacturer": "Sony",
+    "model": "FE 50mm f/2.8 Macro",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 50,
+            "aperture": 2.8,
+            "minFocus": 0.16,
+            "magnification": 1.0
+        }
+    ]
+},
+{
+    "id": 3002,
+    "manufacturer": "Sony",
+    "model": "FE 70-200mm f/2.8 Macro G OSS II",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 70,
+            "aperture": 2.8,
+            "minFocus": 0.40,
+            "magnification": 0.32
+        },
+        {
+            "focalLength": 200,
+            "aperture": 2.8,
+            "minFocus": 0.82,
+            "magnification": 0.30
+        }
+    ]
+},
+{
+    "id": 3003,
+    "manufacturer": "Sony",
+    "model": "FE 35mm f/1.8",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 35,
+            "aperture": 1.8,
+            "minFocus": 0.22,
+            "magnification": 0.24
+        }
+    ]
+},
+{
+    "id": 5000,
+    "manufacturer": "Canon",
+    "model": "RF 100mm f/2.8L Macro IS USM",
+    "mount": "Canon RF",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 100,
+            "aperture": 2.8,
+            "minFocus": 0.26,
+            "magnification": 1.4
+        }
+    ]
+},
+{
+    "id": 5001,
+    "manufacturer": "Canon",
+    "model": "RF 85mm f/2 Macro IS STM",
+    "mount": "Canon RF",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 85,
+            "aperture": 2.0,
+            "minFocus": 0.35,
+            "magnification": 0.5
+        }
+    ]
+},
+{
+    "id": 5002,
+    "manufacturer": "Canon",
+    "model": "RF 100-500mm f/4.5-7.1L IS USM",
+    "mount": "Canon RF",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 100,
+            "aperture": 4.5,
+            "minFocus": 1.2,
+            "magnification": 0.09
+        },
+        {
+            "focalLength": 500,
+            "aperture": 7.1,
+            "minFocus": 1.2,
+            "magnification": 0.33
+        }
+    ]
+},
+{
+    "id": 5003,
+    "manufacturer": "Canon",
+    "model": "RF 70-200mm f/2.8L IS USM",
+    "mount": "Canon RF",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 70,
+            "aperture": 2.8,
+            "minFocus": 0.7,
+            "magnification": 0.23
+        },
+        {
+            "focalLength": 200,
+            "aperture": 2.8,
+            "minFocus": 0.7,
+            "magnification": 0.23
+        }
+    ]
+},
+{
+    "id": 5004,
+    "manufacturer": "Canon",
+    "model": "RF 100-400mm f/5.6-8L IS USM",
+    "mount": "Canon RF",
+    "teleconverters": [],
+    "data": [
+        {
+            "focalLength": 100,
+            "aperture": 5.6,
+            "minFocus": 1.2,
+            "magnification": 0.12
+        },
+        {
+            "focalLength": 400,
+            "aperture": 8.0,
+            "minFocus": 1.05,
+            "magnification": 0.41
+        }
+    ]
+},
+{
+        "id": 1016,
+        "manufacturer": "Nikon",
+        "model": "Z 85mm f/1.2 S",
+        "mount": "Nikon Z",
+    "teleconverters": [],
+        "data": [
+            {
+                "focalLength": 85,
+                "aperture": 1.2,
+                "minFocus": 0.85,
+                "magnification": 0.11
+            }
+        ]
+    }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 3000,
+    "manufacturer": "Sony",
+    "model": "FE 90mm f/2.8 Macro G OSS",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 90,
+        "aperture": 2.8,
+        "minFocus": 0.28,
+        "magnification": 1.0
+      }
+    ]
+  },
+  {
+    "id": 3001,
+    "manufacturer": "Sony",
+    "model": "FE 50mm f/2.8 Macro",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 50,
+        "aperture": 2.8,
+        "minFocus": 0.16,
+        "magnification": 1.0
+      }
+    ]
+  },
+  {
+    "id": 3002,
+    "manufacturer": "Sony",
+    "model": "FE 70-200mm f/2.8 Macro G OSS II",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 70,
+        "aperture": 2.8,
+        "minFocus": 0.40,
+        "magnification": 0.32
+      },
+      {
+        "focalLength": 200,
+        "aperture": 2.8,
+        "minFocus": 0.82,
+        "magnification": 0.30
+      }
+    ]
+  },
+  {
+    "id": 3003,
+    "manufacturer": "Sony",
+    "model": "FE 35mm f/1.8",
+    "mount": "Sony E",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 35,
+        "aperture": 1.8,
+        "minFocus": 0.22,
+        "magnification": 0.24
+      }
+    ]
+  }
+]

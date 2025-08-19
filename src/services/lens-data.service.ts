@@ -1,8 +1,11 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { LensData, Lens } from '../contracts/lens.interface';
-import lensDataJson from '../assets/lens-data.json';
-import { LensService } from './lens-calculations-service';
+import { LensService } from './lens.calculations';
 
+// Import lens data from multiple files
+import nikonZLenses from '../assets/lens-data/nikon-z-mount.json';
+import sonyELenses from '../assets/lens-data/sony-e-mount.json';
+import canonRFLenses from '../assets/lens-data/canon-rf-mount.json';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +22,15 @@ export class LensDataService {
   readonly lensData = this._lensData.asReadonly();
 
   private loadData(): void {
-    // Process lens data to calculate magnifications and apertures where set to -1
-    const processedData = lensDataJson.map(lens => {
+    // Combine all lens data from different files
+    const allLensData = [
+      ...nikonZLenses,
+      ...sonyELenses,
+      ...canonRFLenses
+    ];
+
+    // Process lens data to calculate magnifications where set to -1
+    const processedData = allLensData.map(lens => {
       // Find the maximum magnification value for this lens (reference point)
       const maxMagnificationEntry = lens.data
         .filter(entry => entry.magnification > 0)
@@ -29,23 +39,15 @@ export class LensDataService {
           { magnification: 0, focalLength: 0, aperture: 0, minFocus: 0 }
         );
 
-      // For aperture calculation on zoom lenses, find min and max focal lengths with valid apertures
-      const validApertureEntries = lens.data.filter(entry => entry.aperture > 0);
-      const minFocalLengthEntry = validApertureEntries.reduce((min, current) => 
-        current.focalLength < min.focalLength ? current : min,
-        validApertureEntries[0] || { focalLength: Infinity, aperture: 0 }
-      );
-      const maxFocalLengthEntry = validApertureEntries.reduce((max, current) => 
-        current.focalLength > max.focalLength ? current : max,
-        validApertureEntries[0] || { focalLength: 0, aperture: 0 }
-      );
+      // If no positive magnification found, return lens as-is
+      if (maxMagnificationEntry.magnification === 0) {
+        return lens;
+      }
 
       // Process each data entry
       const processedLensData = lens.data.map(entry => {
-        let updatedEntry = { ...entry };
-
-        // Calculate magnification if set to -1
-        if (entry.magnification === -1 && maxMagnificationEntry.magnification > 0) {
+        // If magnification is -1, calculate it
+        if (entry.magnification === -1) {
           const calculatedMagnification = this.lensService.calculateMagnification(
             entry.focalLength,
             entry.minFocus,
@@ -54,24 +56,13 @@ export class LensDataService {
             maxMagnificationEntry.magnification
           );
           
-          updatedEntry.magnification = calculatedMagnification;
-        }
-
-        // Calculate aperture if set to -1 (for zoom lenses)
-        if (entry.aperture === -1 && validApertureEntries.length >= 2 && 
-            minFocalLengthEntry.focalLength !== maxFocalLengthEntry.focalLength) {
-          const calculatedAperture = this.lensService.calculateApertureAtFocalLength(
-            entry.focalLength,
-            minFocalLengthEntry.focalLength,
-            maxFocalLengthEntry.focalLength,
-            minFocalLengthEntry.aperture,
-            maxFocalLengthEntry.aperture
-          );
-          
-          updatedEntry.aperture = calculatedAperture;
+          return {
+            ...entry,
+            magnification: calculatedMagnification
+          };
         }
         
-        return updatedEntry;
+        return entry;
       });
 
       return {
@@ -152,7 +143,7 @@ export class LensDataService {
 
         // Filter by teleconverter compatibility
         if (criteria.teleconverterCompatible !== undefined) {
-          const hasTC = lens.teleconverters.length > 0;
+          const hasTC = lens.teleconverters && lens.teleconverters.length > 0;
           if (hasTC !== criteria.teleconverterCompatible) return false;
         }
 
