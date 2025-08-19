@@ -345,6 +345,72 @@
     ]
   },
   {
+    "id": 1016,
+    "manufacturer": "Nikon",
+    "model": "Z 14-30mm f/4 S",
+    "mount": "Z Mount",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 14,
+        "aperture": 4.0,
+        "minFocus": 0.28,
+        "magnification": 0.16
+      },
+      {
+        "focalLength": 20,
+        "aperture": 4.0,
+        "minFocus": 0.28,
+        "magnification": 0.12
+      },
+      {
+        "focalLength": 24,
+        "aperture": 4.0,
+        "minFocus": 0.28,
+        "magnification": 0.11
+      },
+      {
+        "focalLength": 30,
+        "aperture": 4.0,
+        "minFocus": 0.28,
+        "magnification": 0.09
+      }
+    ]
+  },
+  {
+    "id": 1017,
+    "manufacturer": "Nikon",
+    "model": "Z 14-24mm f/2.8 S",
+    "mount": "Z Mount",
+    "teleconverters": [],
+    "data": [
+      {
+        "focalLength": 14,
+        "aperture": 2.8,
+        "minFocus": 0.28,
+        "magnification": 0.13
+      },
+      {
+        "focalLength": 16,
+        "aperture": 2.8,
+        "minFocus": 0.28,
+        "magnification": 0.11
+      },
+      {
+        "focalLength": 20,
+        "aperture": 2.8,
+        "minFocus": 0.28,
+        "magnification": 0.09
+      },
+      {
+        "focalLength": 24,
+        "aperture": 2.8,
+        "minFocus": 0.28,
+        "magnification": 0.08
+      }
+    ]
+  },
+  {
     "id": 3000,
     "manufacturer": "Sony",
     "model": "FE 90mm f/2.8 Macro G OSS",
