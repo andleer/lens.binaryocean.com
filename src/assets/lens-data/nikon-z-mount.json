@@ -55,7 +55,7 @@
     {
       "id": 1002,
       "model": "Z MC 105mm f/2.8 Macro VR S",
-      "teleconverters": [1.4, 2.0],
+      "teleconverters": [],
       "data": [
         {
           "focalLength": 105,
