@@ -4,6 +4,7 @@ import { LensService } from './lens.calculations';
 
 // Import lens data from multiple files
 import nikonZLenses from '../assets/lens-data/nikon-z-mount.json';
+import nikonFLenses from '../assets/lens-data/nikon-f-mount.json';
 import sonyELenses from '../assets/lens-data/sony-e-mount.json';
 import canonRFLenses from '../assets/lens-data/canon-rf-mount.json';
 import tamronZLenses from '../assets/lens-data/tamron-z-mount.json';
@@ -34,6 +35,11 @@ export class LensDataService {
         ...lens,
         manufacturer: nikonZLenses.manufacturer,
         mount: nikonZLenses.mount
+      })),
+      ...nikonFLenses.lenses.map(lens => ({
+        ...lens,
+        manufacturer: nikonFLenses.manufacturer,
+        mount: nikonFLenses.mount
       })),
       ...sonyELenses.lenses.map(lens => ({
         ...lens,

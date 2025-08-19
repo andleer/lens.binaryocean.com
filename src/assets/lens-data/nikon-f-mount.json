@@ -1,0 +1,181 @@
+{
+  "manufacturer": "Nikon",
+  "mount": "Nikon F",
+  "lenses": [
+    {
+      "id": 2000,
+      "model": "AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 105,
+          "aperture": 2.8,
+          "minFocus": 0.31,
+          "magnification": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2001,
+      "model": "AF-S Micro NIKKOR 60mm f/2.8G ED",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 60,
+          "aperture": 2.8,
+          "minFocus": 0.185,
+          "magnification": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2002,
+      "model": "AF-S NIKKOR 24-70mm f/2.8E ED VR",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 2.8,
+          "minFocus": 0.38,
+          "magnification": 0.22
+        },
+        {
+          "focalLength": 35,
+          "aperture": 2.8,
+          "minFocus": 0.38,
+          "magnification": 0.28
+        },
+        {
+          "focalLength": 50,
+          "aperture": 2.8,
+          "minFocus": 0.38,
+          "magnification": 0.30
+        },
+        {
+          "focalLength": 70,
+          "aperture": 2.8,
+          "minFocus": 0.38,
+          "magnification": 0.32
+        }
+      ]
+    },
+    {
+      "id": 2003,
+      "model": "AF-S NIKKOR 70-200mm f/2.8E FL ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 70,
+          "aperture": 2.8,
+          "minFocus": 1.1,
+          "magnification": 0.21
+        },
+        {
+          "focalLength": 135,
+          "aperture": 2.8,
+          "minFocus": 1.1,
+          "magnification": 0.25
+        },
+        {
+          "focalLength": 200,
+          "aperture": 2.8,
+          "minFocus": 1.1,
+          "magnification": 0.28
+        }
+      ]
+    },
+    {
+      "id": 2004,
+      "model": "AF-S NIKKOR 200-500mm f/5.6E ED VR",
+      "teleconverters": [1.4],
+      "data": [
+        {
+          "focalLength": 200,
+          "aperture": 5.6,
+          "minFocus": 2.2,
+          "magnification": 0.22
+        },
+        {
+          "focalLength": 300,
+          "aperture": 5.6,
+          "minFocus": 2.2,
+          "magnification": 0.32
+        },
+        {
+          "focalLength": 400,
+          "aperture": 5.6,
+          "minFocus": 2.2,
+          "magnification": 0.35
+        },
+        {
+          "focalLength": 500,
+          "aperture": 5.6,
+          "minFocus": 2.2,
+          "magnification": 0.38
+        }
+      ]
+    },
+    {
+      "id": 2005,
+      "model": "AF-S NIKKOR 16-35mm f/4G ED VR",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 16,
+          "aperture": 4.0,
+          "minFocus": 0.28,
+          "magnification": 0.26
+        },
+        {
+          "focalLength": 24,
+          "aperture": 4.0,
+          "minFocus": 0.28,
+          "magnification": 0.24
+        },
+        {
+          "focalLength": 35,
+          "aperture": 4.0,
+          "minFocus": 0.28,
+          "magnification": 0.24
+        }
+      ]
+    },
+    {
+      "id": 2006,
+      "model": "AF-S NIKKOR 80-400mm f/4.5-5.6G ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 80,
+          "aperture": 4.5,
+          "minFocus": 1.75,
+          "magnification": 0.20
+        },
+        {
+          "focalLength": 135,
+          "aperture": 4.8,
+          "minFocus": 1.75,
+          "magnification": 0.22
+        },
+        {
+          "focalLength": 200,
+          "aperture": 5.0,
+          "minFocus": 1.75,
+          "magnification": 0.24
+        },
+        {
+          "focalLength": 300,
+          "aperture": 5.3,
+          "minFocus": 1.75,
+          "magnification": 0.27
+        },
+        {
+          "focalLength": 400,
+          "aperture": 5.6,
+          "minFocus": 1.75,
+          "magnification": 0.29
+        }
+      ]
+    }
+  ]
+}
