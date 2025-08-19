@@ -286,6 +286,19 @@
           "magnification": 0.39
         }
       ]
+    },
+    {
+      "id": 1015,
+      "model": "Z 400mm f/4.5 VR S",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 400,
+          "aperture": 4.5,
+          "minFocus": 2.5,
+          "magnification": 0.16
+        }
+      ]
     }
   ]
 }
