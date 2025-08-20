@@ -166,6 +166,11 @@
   line-height: 1.3;
 }
 
+/* Hide mobile labels on desktop */
+.mobile-label {
+  display: none;
+}
+
 .focal-range-info {
   background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
   color: white;
@@ -439,14 +444,43 @@
     font-size: 20px;
   }
 
-  .spec-header, .spec-row {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 8px 12px;
+  .spec-header {
+    display: none; /* Hide the header on mobile since each row will have labels */
   }
 
-  .spec-header div, .spec-row div {
-    padding: 4px 0;
+  .spec-row {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  }
+
+  .spec-row:hover {
+    background-color: #f9fafb;
+  }
+
+  .spec-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+  }
+
+  .spec-data:last-child {
+    border-bottom: none;
+  }
+
+  .spec-data .mobile-label {
+    display: inline !important;
+    font-weight: 600;
+    color: #374151;
+    min-width: 120px;
+    text-align: left;
   }
 
   .comparison-table {

@@ -50,13 +50,34 @@
           </div>
           @for (item of sortedLensData(); track item.lens.id + '_' + item.data.focalLength + '_' + (item.teleconverter || 'base')) {
             <div class="spec-row">
-              <div class="spec-data">{{ item.lens.manufacturer }}</div> 
-              <div class="spec-data">{{ item.lens.model }}</div>
-              <div class="spec-data">{{ item.teleconverter ? (item.teleconverter | number:'1.1-1') + '×' : '—' }}</div>
-              <div class="spec-data">{{ item.data.focalLength | number:'1.0-0' }}mm</div>
-              <div class="spec-data">f/{{ item.data.aperture.toFixed(1) }}</div>
-              <div class="spec-data">{{ item.data.minFocus.toFixed(2) }}m</div>
-              <div class="spec-data">{{ item.data.magnification | number:'1.2-2' }}×</div>
+              <div class="spec-data">
+                <span class="mobile-label">Manufacturer:</span>
+                {{ item.lens.manufacturer }}
+              </div> 
+              <div class="spec-data">
+                <span class="mobile-label">Model:</span>
+                {{ item.lens.model }}
+              </div>
+              <div class="spec-data">
+                <span class="mobile-label">TC:</span>
+                {{ item.teleconverter ? (item.teleconverter | number:'1.1-1') + '×' : '—' }}
+              </div>
+              <div class="spec-data">
+                <span class="mobile-label">Focal Length:</span>
+                {{ item.data.focalLength | number:'1.0-0' }}mm
+              </div>
+              <div class="spec-data">
+                <span class="mobile-label">Max Aperture:</span>
+                f/{{ item.data.aperture.toFixed(1) }}
+              </div>
+              <div class="spec-data">
+                <span class="mobile-label">Min Focus:</span>
+                {{ item.data.minFocus.toFixed(2) }}m
+              </div>
+              <div class="spec-data">
+                <span class="mobile-label">Magnification:</span>
+                {{ item.data.magnification | number:'1.2-2' }}×
+              </div>
             </div>
           }
         </div>
