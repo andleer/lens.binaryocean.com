@@ -299,6 +299,19 @@
           "magnification": 0.16
         }
       ]
+    },
+    {
+      "id": 1016,
+      "model": "Z 600mm f/6.3 VR S PF",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 600,
+          "aperture": 6.3,
+          "minFocus": 4.0,
+          "magnification": 0.15
+        }
+      ]
     }
   ]
 }
