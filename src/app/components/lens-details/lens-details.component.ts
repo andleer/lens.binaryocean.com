@@ -177,10 +177,40 @@ export class LensDetailsComponent {
     return this.selectedTeleconverters().includes(tc);
   }
 
+  /**
+   * Round calculated f-stop to standard camera f-stop increments
+   * Cameras display standard f-stops in 1/3 stop increments, not exact mathematical results
+   */
+  roundToStandardFStop(fstop: number): number {
+    // Standard f-numbers in 1/3 stop increments (most common camera display values)
+    const standardFStops = [
+      1.0, 1.1, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.5, 2.8, 3.2, 3.5, 
+      4.0, 4.5, 5.0, 5.6, 6.3, 7.1, 8.0, 9.0, 10, 11, 13, 14, 
+      16, 18, 20, 22, 25, 29, 32, 36, 40, 45, 51, 57, 64
+    ];
+    
+    // Find the closest standard f-stop
+    let closest = standardFStops[0];
+    let minDiff = Math.abs(fstop - closest);
+    
+    for (const standard of standardFStops) {
+      const diff = Math.abs(fstop - standard);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = standard;
+      }
+    }
+    
+    return closest;
+  }
+
   calculateTeleconverterData(originalData: any, teleconverter: number) {
+    const calculatedAperture = originalData.aperture * teleconverter;
+    const roundedAperture = this.roundToStandardFStop(calculatedAperture);
+    
     return {
       focalLength: originalData.focalLength * teleconverter,
-      aperture: originalData.aperture * teleconverter,
+      aperture: roundedAperture,
       minFocus: originalData.minFocus, // Min focus distance doesn't change
       magnification: originalData.magnification * teleconverter
     };
