@@ -176,6 +176,84 @@
           "magnification": 0.29
         }
       ]
+    },
+    {
+      "id": 2007,
+      "model": "AF-S NIKKOR 300mm f/2.8G ED VR II",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 300,
+          "aperture": 2.8,
+          "minFocus": 2.3,
+          "magnification": 0.16
+        }
+      ]
+    },
+    {
+      "id": 2008,
+      "model": "AF-S NIKKOR 400mm f/2.8E FL ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 400,
+          "aperture": 2.8,
+          "minFocus": 2.6,
+          "magnification": 0.16
+        }
+      ]
+    },
+    {
+      "id": 2009,
+      "model": "AF-S NIKKOR 500mm f/4E FL ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 500,
+          "aperture": 4.0,
+          "minFocus": 3.6,
+          "magnification": 0.15
+        }
+      ]
+    },
+    {
+      "id": 2010,
+      "model": "AF-S NIKKOR 600mm f/4E FL ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 600,
+          "aperture": 4.0,
+          "minFocus": 4.4,
+          "magnification": 0.14
+        }
+      ]
+    },
+    {
+      "id": 2011,
+      "model": "AF-S NIKKOR 800mm f/5.6E FL ED VR",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 800,
+          "aperture": 5.6,
+          "minFocus": 6.0,
+          "magnification": 0.125
+        }
+      ]
+    },
+    {
+      "id": 2012,
+      "model": "AF-S NIKKOR 200mm f/2G ED VR II",
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 200,
+          "aperture": 2.0,
+          "minFocus": 1.9,
+          "magnification": 0.12
+        }
+      ]
     }
   ]
 }
