@@ -182,7 +182,7 @@
           "focalLength": 120,
           "aperture": 4.0,
           "minFocus": 0.35,
-          "magnification": 0.32
+          "magnification": 0.39
         }
       ]
     },
@@ -323,6 +323,37 @@
           "aperture": 6.3,
           "minFocus": 5.0,
           "magnification": 0.125
+        }
+      ]
+    },
+    {
+      "id": 1018,
+      "model": "Z 24-70mm f/2.8 S II",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 2.8,
+          "minFocus": 0.21,
+          "magnification": 0.30
+        },
+        {
+          "focalLength": 35,
+          "aperture": 2.8,
+          "minFocus": 0.21,
+          "magnification": 0.32
+        },
+        {
+          "focalLength": 50,
+          "aperture": 2.8,
+          "minFocus": 0.21,
+          "magnification": 0.33
+        },
+        {
+          "focalLength": 70,
+          "aperture": 2.8,
+          "minFocus": 0.21,
+          "magnification": 0.35
         }
       ]
     }
