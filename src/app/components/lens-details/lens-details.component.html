@@ -11,7 +11,7 @@
                 type="checkbox" 
                 [(ngModel)]="showMaxMagOnly"
                 class="filter-checkbox">
-              Show Max Magnification Only
+              Max Mag Only
             </label>
             @if (availableTeleconverters().length > 0) {
               <div class="teleconverter-controls">
@@ -45,7 +45,7 @@
               Min Focus {{ getSortIcon('minFocus') }}
             </div>
             <div class="sortable" (click)="sortBy('magnification')">
-              Magnification {{ getSortIcon('magnification') }}
+              Mag {{ getSortIcon('magnification') }}
             </div>
           </div>
           @for (item of sortedLensData(); track item.lens.id + '_' + item.data.focalLength + '_' + (item.teleconverter || 'base')) {
