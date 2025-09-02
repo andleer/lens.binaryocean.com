@@ -14,6 +14,23 @@ import viltroxZLenses from '../assets/lens-data/viltrox-z-mount.json';
 import viltroxRFLenses from '../assets/lens-data/viltrox-rf-mount.json';
 import viltroxELenses from '../assets/lens-data/viltrox-e-mount.json';
 
+// Interface for the structure of lens data files
+interface LensDataSource {
+  manufacturer: string;
+  mount: string;
+  lenses: Array<{
+    id: number;
+    model: string;
+    teleconverters: number[];
+    data: Array<{
+      focalLength: number;
+      aperture: number;
+      minFocus: number;
+      magnification: number;
+    }>;
+  }>;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,59 +46,22 @@ export class LensDataService {
   readonly lensData = this._lensData.asReadonly();
 
   private loadData(): void {
-    // Extract lens data from the new structured files and add manufacturer/mount info
-    const allLensData = [
-      ...nikonZLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: nikonZLenses.manufacturer,
-        mount: nikonZLenses.mount
-      })),
-      ...nikonFLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: nikonFLenses.manufacturer,
-        mount: nikonFLenses.mount
-      })),
-      ...sonyELenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: sonyELenses.manufacturer,
-        mount: sonyELenses.mount
-      })),
-      ...canonRFLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: canonRFLenses.manufacturer,
-        mount: canonRFLenses.mount
-      })),
-      ...tamronZLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: tamronZLenses.manufacturer,
-        mount: tamronZLenses.mount
-      })),
-      ...tamronELenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: tamronELenses.manufacturer,
-        mount: tamronELenses.mount
-      })),
-      ...tamronRFLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: tamronRFLenses.manufacturer,
-        mount: tamronRFLenses.mount
-      })),
-      ...viltroxZLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: viltroxZLenses.manufacturer,
-        mount: viltroxZLenses.mount
-      })),
-      ...viltroxRFLenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: viltroxRFLenses.manufacturer,
-        mount: viltroxRFLenses.mount
-      })),
-      ...viltroxELenses.lenses.map(lens => ({
-        ...lens,
-        manufacturer: viltroxELenses.manufacturer,
-        mount: viltroxELenses.mount
-      }))
+    // Define all lens data sources
+    const lensDataSources = [
+      nikonZLenses,
+      nikonFLenses,
+      sonyELenses,
+      canonRFLenses,
+      tamronZLenses,
+      tamronELenses,
+      tamronRFLenses,
+      viltroxZLenses,
+      viltroxRFLenses,
+      viltroxELenses
     ];
+
+    // Extract and normalize lens data from all sources
+    const allLensData = this.extractLensData(lensDataSources);
 
     // Process lens data to calculate magnifications where set to -1
     const processedData = allLensData.map(lens => {
@@ -204,5 +184,19 @@ export class LensDataService {
         return true;
       });
     });
+  }
+
+  /**
+   * Extract and normalize lens data from multiple data sources
+   * Adds manufacturer and mount information to each lens
+   */
+  private extractLensData(dataSources: LensDataSource[]): Lens[] {
+    return dataSources.flatMap(dataSource => 
+      dataSource.lenses.map(lens => ({
+        manufacturer: dataSource.manufacturer,
+        mount: dataSource.mount,
+        ...lens
+      }))
+    );
   }
 }
