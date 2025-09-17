@@ -366,6 +366,38 @@
           "magnification": 0.35
         }
       ]
+    },
+    {
+      "id": 1032,
+      "model": "Z 24mm f/1.8 S",
+      "weight": 450,
+      "length": 96,
+      "width": 78,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 1.8,
+          "minFocus": 0.25,
+          "magnification": 0.14
+        }
+      ]
+    },
+    {
+      "id": 1034,
+      "model": "Z 50mm f/1.8 S",
+      "weight": 415,
+      "length": 87,
+      "width": 73,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 1.8,
+          "minFocus": 0.4,
+          "magnification": 0.15
+        }
+      ]
     }
   ]
 }
