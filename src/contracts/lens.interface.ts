@@ -11,6 +11,9 @@ export interface Lens {
   manufacturer: string;
   model: string;
   mount: string;
+  weight?: number; // Weight in grams (optional for backward compatibility)
+  length?: number; // Length in mm (optional for backward compatibility)
+  width?: number; // Width/diameter in mm (optional for backward compatibility)
   teleconverters: number[]; // [1.4, 2.0] - available teleconverter multipliers
   data: LensSpecification[];
 }

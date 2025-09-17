@@ -5,6 +5,9 @@
     {
       "id": 2000,
       "model": "AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED",
+      "weight": 790,
+      "length": 116,
+      "width": 83,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -18,6 +21,9 @@
     {
       "id": 2001,
       "model": "AF-S Micro NIKKOR 60mm f/2.8G ED",
+      "weight": 425,
+      "length": 89,
+      "width": 70,
       "teleconverters": [],
       "data": [
         {
@@ -31,6 +37,9 @@
     {
       "id": 2002,
       "model": "AF-S NIKKOR 24-70mm f/2.8E ED VR",
+      "weight": 1070,
+      "length": 154,
+      "width": 88,
       "teleconverters": [],
       "data": [
         {
@@ -38,18 +47,6 @@
           "aperture": 2.8,
           "minFocus": 0.38,
           "magnification": 0.22
-        },
-        {
-          "focalLength": 35,
-          "aperture": 2.8,
-          "minFocus": 0.38,
-          "magnification": 0.28
-        },
-        {
-          "focalLength": 50,
-          "aperture": 2.8,
-          "minFocus": 0.38,
-          "magnification": 0.30
         },
         {
           "focalLength": 70,
@@ -71,12 +68,6 @@
           "magnification": 0.21
         },
         {
-          "focalLength": 135,
-          "aperture": 2.8,
-          "minFocus": 1.1,
-          "magnification": 0.25
-        },
-        {
           "focalLength": 200,
           "aperture": 2.8,
           "minFocus": 1.1,
@@ -94,18 +85,6 @@
           "aperture": 5.6,
           "minFocus": 2.2,
           "magnification": 0.22
-        },
-        {
-          "focalLength": 300,
-          "aperture": 5.6,
-          "minFocus": 2.2,
-          "magnification": 0.32
-        },
-        {
-          "focalLength": 400,
-          "aperture": 5.6,
-          "minFocus": 2.2,
-          "magnification": 0.35
         },
         {
           "focalLength": 500,
@@ -127,12 +106,6 @@
           "magnification": 0.26
         },
         {
-          "focalLength": 24,
-          "aperture": 4.0,
-          "minFocus": 0.28,
-          "magnification": 0.24
-        },
-        {
           "focalLength": 35,
           "aperture": 4.0,
           "minFocus": 0.28,
@@ -150,24 +123,6 @@
           "aperture": 4.5,
           "minFocus": 1.75,
           "magnification": 0.20
-        },
-        {
-          "focalLength": 135,
-          "aperture": 4.8,
-          "minFocus": 1.75,
-          "magnification": 0.22
-        },
-        {
-          "focalLength": 200,
-          "aperture": 5.0,
-          "minFocus": 1.75,
-          "magnification": 0.24
-        },
-        {
-          "focalLength": 300,
-          "aperture": 5.3,
-          "minFocus": 1.75,
-          "magnification": 0.27
         },
         {
           "focalLength": 400,

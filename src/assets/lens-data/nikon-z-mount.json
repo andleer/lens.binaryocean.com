@@ -5,6 +5,9 @@
     {
       "id": 1000,
       "model": "Z 100-400mm f/4.5-5.6 VR S",
+      "weight": 1355,
+      "length": 220,
+      "width": 98,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -12,24 +15,6 @@
           "aperture": 4.5,
           "minFocus": 0.75,
           "magnification": 0.23
-        },
-        {
-          "focalLength": 135,
-          "aperture": 4.8,
-          "minFocus": 0.82,
-          "magnification": 0.27
-        },
-        {
-          "focalLength": 200,
-          "aperture": 5.0,
-          "minFocus": 0.86,
-          "magnification": 0.30
-        },
-        {
-          "focalLength": 300,
-          "aperture": 5.3,
-          "minFocus": 0.92,
-          "magnification": 0.31
         },
         {
           "focalLength": 400,
@@ -42,6 +27,9 @@
     {
       "id": 1001,
       "model": "Z 85mm f/1.2 S",
+      "weight": 1160,
+      "length": 150,
+      "width": 90,
       "teleconverters": [],
       "data": [
         {
@@ -55,6 +43,9 @@
     {
       "id": 1002,
       "model": "Z MC 105mm f/2.8 Macro VR S",
+      "weight": 630,
+      "length": 140,
+      "width": 85,
       "teleconverters": [],
       "data": [
         {
@@ -68,6 +59,9 @@
     {
       "id": 1003,
       "model": "Z MC 50mm f/2.8 Macro",
+      "weight": 260,
+      "length": 66,
+      "width": 67,
       "teleconverters": [],
       "data": [
         {
@@ -81,6 +75,9 @@
     {
       "id": 1004,
       "model": "Z 50mm f/1.2 S",
+      "weight": 1090,
+      "length": 150,
+      "width": 90,
       "teleconverters": [],
       "data": [
         {
@@ -94,6 +91,9 @@
     {
       "id": 1005,
       "model": "Z 35mm f/1.8 S",
+      "weight": 370,
+      "length": 86,
+      "width": 73,
       "teleconverters": [],
       "data": [
         {
@@ -107,6 +107,9 @@
     {
       "id": 1006,
       "model": "Z 24-70mm f/2.8 S",
+      "weight": 805,
+      "length": 126,
+      "width": 89,
       "teleconverters": [],
       "data": [
         {
@@ -126,6 +129,9 @@
     {
       "id": 1007,
       "model": "Z 70-200mm f/2.8 VR S",
+      "weight": 1360,
+      "length": 220,
+      "width": 89,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -145,6 +151,9 @@
     {
       "id": 1008,
       "model": "Z 14-24mm f/2.8 S",
+      "weight": 650,
+      "length": 124,
+      "width": 89,
       "teleconverters": [],
       "data": [
         {
@@ -164,6 +173,9 @@
     {
       "id": 1009,
       "model": "Z 24-120mm f/4 S",
+      "weight": 630,
+      "length": 114,
+      "width": 77,
       "teleconverters": [],
       "data": [
         {
@@ -171,12 +183,6 @@
           "aperture": 4.0,
           "minFocus": 0.35,
           "magnification": 0.19
-        },
-        {
-          "focalLength": 50,
-          "aperture": 4.0,
-          "minFocus": 0.35,
-          "magnification": 0.24
         },
         {
           "focalLength": 120,
@@ -189,6 +195,9 @@
     {
       "id": 1010,
       "model": "Z 600mm f/4 TC VR S",
+      "weight": 3260,
+      "length": 437,
+      "width": 148,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -202,6 +211,9 @@
     {
       "id": 1011,
       "model": "Z 400mm f/2.8 TC VR S",
+      "weight": 2950,
+      "length": 365,
+      "width": 156,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -256,30 +268,6 @@
           "magnification": 0.25
         },
         {
-          "focalLength": 200,
-          "aperture": 5.6,
-          "minFocus": 1.3,
-          "magnification": 0.28
-        },
-        {
-          "focalLength": 300,
-          "aperture": 6.0,
-          "minFocus": 1.3,
-          "magnification": 0.32
-        },
-        {
-          "focalLength": 400,
-          "aperture": 6.1,
-          "minFocus": 1.3,
-          "magnification": 0.35
-        },
-        {
-          "focalLength": 500,
-          "aperture": 6.2,
-          "minFocus": 1.3,
-          "magnification": 0.37
-        },
-        {
           "focalLength": 600,
           "aperture": 6.3,
           "minFocus": 1.3,
@@ -290,6 +278,9 @@
     {
       "id": 1015,
       "model": "Z 400mm f/4.5 VR S",
+      "weight": 1245,
+      "length": 235,
+      "width": 98,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -303,6 +294,9 @@
     {
       "id": 1016,
       "model": "Z 600mm f/6.3 VR S PF",
+      "weight": 1470,
+      "length": 278,
+      "width": 106,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -316,6 +310,9 @@
     {
       "id": 1017,
       "model": "Z 800mm f/6.3 VR S PF",
+      "weight": 2385,
+      "length": 385,
+      "width": 106,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -329,6 +326,9 @@
     {
       "id": 1018,
       "model": "Z 24-70mm f/2.8 S II",
+      "weight": 750,
+      "length": 126,
+      "width": 89,
       "teleconverters": [],
       "data": [
         {
@@ -338,21 +338,31 @@
           "magnification": 0.30
         },
         {
-          "focalLength": 35,
-          "aperture": 2.8,
-          "minFocus": 0.21,
-          "magnification": 0.32
-        },
-        {
-          "focalLength": 50,
-          "aperture": 2.8,
-          "minFocus": 0.21,
-          "magnification": 0.33
-        },
-        {
           "focalLength": 70,
           "aperture": 2.8,
           "minFocus": 0.21,
+          "magnification": 0.35
+        }
+      ]
+    },
+    {
+      "id": 1030,
+      "model": "Z 28-400mm f/4-8 VR",
+      "weight": 725,
+      "length": 140,
+      "width": 84,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 28,
+          "aperture": 4.0,
+          "minFocus": 0.2,
+          "magnification": 0.35
+        },
+        {
+          "focalLength": 400,
+          "aperture": 8.0,
+          "minFocus": 0.2,
           "magnification": 0.35
         }
       ]

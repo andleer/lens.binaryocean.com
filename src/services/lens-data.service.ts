@@ -21,6 +21,9 @@ interface LensDataSource {
   lenses: Array<{
     id: number;
     model: string;
+    weight?: number; // Weight in grams (optional for backward compatibility)
+    length?: number; // Length in mm (optional for backward compatibility)
+    width?: number; // Width/diameter in mm (optional for backward compatibility)
     teleconverters: number[];
     data: Array<{
       focalLength: number;

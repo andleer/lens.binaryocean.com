@@ -57,7 +57,7 @@
 
 .lens-header, .lens-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 80px 90px 80px 100px;
   gap: 12px;
   padding: 8px 16px;
   align-items: center;
@@ -129,10 +129,32 @@
   .lens-cards {
     max-height: 400px;
   }
+  
+  .lens-header, .lens-row {
+    grid-template-columns: 1fr 2fr 1fr 60px 70px 60px 80px;
+    gap: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .lens-data {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
   .lens-list-section {
     padding: 1rem;
+  }
+  
+  .lens-header, .lens-row {
+    grid-template-columns: 1fr 1.5fr 50px 50px 60px 50px 60px;
+    gap: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+  
+  .lens-data {
+    font-size: 11px;
   }
 }
