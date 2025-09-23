@@ -49,66 +49,41 @@ export class LensDataService {
   readonly lensData = this._lensData.asReadonly();
 
   private loadData(): void {
-    // Define all lens data sources
     const lensDataSources = [
+      canonRFLenses,
       nikonZLenses,
       nikonFLenses,
       sonyELenses,
-      canonRFLenses,
       tamronZLenses,
       tamronELenses,
       tamronRFLenses,
       viltroxZLenses,
-      viltroxRFLenses,
-      viltroxELenses
+      viltroxELenses,
+      viltroxRFLenses
     ];
 
-    // Extract and normalize lens data from all sources
-    const allLensData = this.extractLensData(lensDataSources);
+    const allLenses = lensDataSources.flatMap(source => 
+      this.extractLensData(source)
+    );
 
-    // Process lens data to calculate magnifications where set to -1
-    const processedData = allLensData.map(lens => {
-      // Find the maximum magnification value for this lens (reference point)
-      const maxMagnificationEntry = lens.data
-        .filter(entry => entry.magnification > 0)
-        .reduce((max, current) => 
-          current.magnification > max.magnification ? current : max, 
-          { magnification: 0, focalLength: 0, aperture: 0, minFocus: 0 }
-        );
+    // Sort lenses by minimum focal length, then by maximum focal length
+    const sortedLenses = allLenses.sort((a, b) => {
+      const aMinFocal = Math.min(...a.data.map(d => d.focalLength));
+      const aMaxFocal = Math.max(...a.data.map(d => d.focalLength));
+      const bMinFocal = Math.min(...b.data.map(d => d.focalLength));
+      const bMaxFocal = Math.max(...b.data.map(d => d.focalLength));
 
-      // If no positive magnification found, return lens as-is
-      if (maxMagnificationEntry.magnification === 0) {
-        return lens;
+      // First sort by minimum focal length
+      if (aMinFocal !== bMinFocal) {
+        return aMinFocal - bMinFocal;
       }
 
-      // Process each data entry
-      const processedLensData = lens.data.map(entry => {
-        // If magnification is -1, calculate it
-        if (entry.magnification === -1) {
-          const calculatedMagnification = this.lensService.calculateMagnification(
-            entry.focalLength,
-            entry.minFocus,
-            maxMagnificationEntry.focalLength,
-            maxMagnificationEntry.minFocus,
-            maxMagnificationEntry.magnification
-          );
-          
-          return {
-            ...entry,
-            magnification: calculatedMagnification
-          };
-        }
-        
-        return entry;
-      });
-
-      return {
-        ...lens,
-        data: processedLensData
-      };
+      // If minimum focal lengths are equal, sort by maximum focal length
+      return aMaxFocal - bMaxFocal;
     });
 
-    this._lensData.set(processedData);
+    // Set the signal with the sorted data
+    this._lensData.set(sortedLenses);
   }
 
   // Computed signals for filtered data
@@ -190,16 +165,14 @@ export class LensDataService {
   }
 
   /**
-   * Extract and normalize lens data from multiple data sources
+   * Extract and normalize lens data from a single data source
    * Adds manufacturer and mount information to each lens
    */
-  private extractLensData(dataSources: LensDataSource[]): Lens[] {
-    return dataSources.flatMap(dataSource => 
-      dataSource.lenses.map(lens => ({
-        manufacturer: dataSource.manufacturer,
-        mount: dataSource.mount,
-        ...lens
-      }))
-    );
+  private extractLensData(dataSource: LensDataSource): Lens[] {
+    return dataSource.lenses.map(lens => ({
+      manufacturer: dataSource.manufacturer,
+      mount: dataSource.mount,
+      ...lens
+    }));
   }
 }
