@@ -103,6 +103,9 @@
     {
       "id": 2005,
       "model": "AF-S NIKKOR 16-35mm f/4G ED VR",
+      "weight": 685,
+      "length": 125,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
