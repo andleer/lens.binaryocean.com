@@ -407,6 +407,22 @@
           "magnification": 0.15
         }
       ]
+    },
+    {
+      "id": 1035,
+      "model": "Z 20mm f/1.8 S",
+      "weight": 505,
+      "length": 108,
+      "filter": 77,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 20,
+          "aperture": 1.8,
+          "minFocus": 0.2,
+          "magnification": 0.19
+        }
+      ]
     }
   ]
 }
