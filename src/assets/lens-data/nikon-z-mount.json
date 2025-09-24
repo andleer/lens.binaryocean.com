@@ -227,6 +227,9 @@
     {
       "id": 1012,
       "model": "Z 85mm f/1.8 S",
+      "weight": 470,
+      "length": 99,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -262,6 +265,9 @@
     {
       "id": 1014,
       "model": "Z 180-600mm f/5.6-6.3 VR S",
+      "weight": 2140,
+      "length": 315,
+      "filter": 95,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
