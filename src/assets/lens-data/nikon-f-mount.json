@@ -7,7 +7,7 @@
       "model": "AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED",
       "weight": 790,
       "length": 116,
-      "width": 83,
+      "filter": 83,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -23,7 +23,7 @@
       "model": "AF-S Micro NIKKOR 60mm f/2.8G ED",
       "weight": 425,
       "length": 89,
-      "width": 70,
+      "filter": 70,
       "teleconverters": [],
       "data": [
         {
@@ -39,7 +39,7 @@
       "model": "AF-S NIKKOR 24-70mm f/2.8E ED VR",
       "weight": 1070,
       "length": 154,
-      "width": 88,
+      "filter": 88,
       "teleconverters": [],
       "data": [
         {
@@ -59,6 +59,9 @@
     {
       "id": 2003,
       "model": "AF-S NIKKOR 70-200mm f/2.8E FL ED VR",
+      "weight": 1430,
+      "length": 202.5,
+      "filter": 77,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -78,6 +81,9 @@
     {
       "id": 2004,
       "model": "AF-S NIKKOR 200-500mm f/5.6E ED VR",
+      "weight": 2300,
+      "length": 267.5,
+      "filter": 95,
       "teleconverters": [1.4],
       "data": [
         {
@@ -116,6 +122,9 @@
     {
       "id": 2006,
       "model": "AF-S NIKKOR 80-400mm f/4.5-5.6G ED VR",
+      "weight": 1570,
+      "length": 203,
+      "filter": 77,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -135,6 +144,9 @@
     {
       "id": 2007,
       "model": "AF-S NIKKOR 300mm f/2.8G ED VR II",
+      "weight": 2900,
+      "length": 267,
+      "filter": 52,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -148,6 +160,9 @@
     {
       "id": 2008,
       "model": "AF-S NIKKOR 400mm f/2.8E FL ED VR",
+      "weight": 3800,
+      "length": 358,
+      "filter": 52,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -161,6 +176,9 @@
     {
       "id": 2009,
       "model": "AF-S NIKKOR 500mm f/4E FL ED VR",
+      "weight": 3090,
+      "length": 387,
+      "filter": 52,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -174,6 +192,9 @@
     {
       "id": 2010,
       "model": "AF-S NIKKOR 600mm f/4E FL ED VR",
+      "weight": 3810,
+      "length": 432,
+      "filter": 52,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -187,6 +208,9 @@
     {
       "id": 2011,
       "model": "AF-S NIKKOR 800mm f/5.6E FL ED VR",
+      "weight": 4590,
+      "length": 461,
+      "filter": 46,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -200,6 +224,9 @@
     {
       "id": 2012,
       "model": "AF-S NIKKOR 200mm f/2G ED VR II",
+      "weight": 2930,
+      "length": 203,
+      "filter": 52,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -207,6 +234,98 @@
           "aperture": 2.0,
           "minFocus": 1.9,
           "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 2013,
+      "model": "AF-S NIKKOR 85mm f/1.4G",
+      "weight": 595,
+      "length": 86,
+      "filter": 77,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 85,
+          "aperture": 1.4,
+          "minFocus": 0.85,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 2014,
+      "model": "AF-S NIKKOR 50mm f/1.4G",
+      "weight": 280,
+      "length": 73.5,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 1.4,
+          "minFocus": 0.45,
+          "magnification": 0.15
+        }
+      ]
+    },
+    {
+      "id": 2015,
+      "model": "AF-S NIKKOR 35mm f/1.4G",
+      "weight": 600,
+      "length": 89,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 35,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.2
+        }
+      ]
+    },
+    {
+      "id": 2016,
+      "model": "AF-S NIKKOR 14-24mm f/2.8G ED",
+      "weight": 1000,
+      "length": 131.5,
+      "filter": "",
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 14,
+          "aperture": 2.8,
+          "minFocus": 0.28,
+          "magnification": 0.13
+        },
+        {
+          "focalLength": 24,
+          "aperture": 2.8,
+          "minFocus": 0.28,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 2017,
+      "model": "AF-S NIKKOR 24-120mm f/4G ED VR",
+      "weight": 710,
+      "length": 103,
+      "filter": 77,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 24,
+          "aperture": 4.0,
+          "minFocus": 0.45,
+          "magnification": 0.22
+        },
+        {
+          "focalLength": 120,
+          "aperture": 4.0,
+          "minFocus": 0.45,
+          "magnification": 0.32
         }
       ]
     }
