@@ -15,7 +15,7 @@
         <div>Mount</div>
         <div>Weight (g)</div>
         <div>Length (mm)</div>
-        <div>Width (mm)</div>
+        <div>Filter (mm)</div>
         <div>TC Compatible</div>
       </div>
       @for (lens of lenses(); track lens.model) {
@@ -28,7 +28,7 @@
           <div class="lens-data">{{ lens.mount }}</div>
           <div class="lens-data">{{ lens.weight ? lens.weight + 'g' : 'N/A' }}</div>
           <div class="lens-data">{{ lens.length ? lens.length + 'mm' : 'N/A' }}</div>
-          <div class="lens-data">{{ lens.width ? lens.width + 'mm' : 'N/A' }}</div>
+          <div class="lens-data">{{ lens.filter ? lens.filter + 'mm' : 'N/A' }}</div>
           <div class="lens-data">{{ lens.teleconverters.length > 0 ? 'Yes' : 'No' }}</div>
         </div>
       }

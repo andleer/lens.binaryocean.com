@@ -7,7 +7,7 @@
       "model": "Z 100-400mm f/4.5-5.6 VR S",
       "weight": 1355,
       "length": 220,
-      "width": 98,
+      "filter": 77,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -29,7 +29,7 @@
       "model": "Z 85mm f/1.2 S",
       "weight": 1160,
       "length": 150,
-      "width": 90,
+      "filter": 82,
       "teleconverters": [],
       "data": [
         {
@@ -45,7 +45,7 @@
       "model": "Z MC 105mm f/2.8 Macro VR S",
       "weight": 630,
       "length": 140,
-      "width": 85,
+      "filter": 62,
       "teleconverters": [],
       "data": [
         {
@@ -61,7 +61,7 @@
       "model": "Z MC 50mm f/2.8 Macro",
       "weight": 260,
       "length": 66,
-      "width": 67,
+      "filter": 46,
       "teleconverters": [],
       "data": [
         {
@@ -77,7 +77,7 @@
       "model": "Z 50mm f/1.2 S",
       "weight": 1090,
       "length": 150,
-      "width": 90,
+      "filter": 82,
       "teleconverters": [],
       "data": [
         {
@@ -93,7 +93,7 @@
       "model": "Z 35mm f/1.8 S",
       "weight": 370,
       "length": 86,
-      "width": 73,
+      "filter": 62,
       "teleconverters": [],
       "data": [
         {
@@ -109,7 +109,7 @@
       "model": "Z 24-70mm f/2.8 S",
       "weight": 805,
       "length": 126,
-      "width": 89,
+      "filter": 82,
       "teleconverters": [],
       "data": [
         {
@@ -131,7 +131,7 @@
       "model": "Z 70-200mm f/2.8 VR S",
       "weight": 1360,
       "length": 220,
-      "width": 89,
+      "filter": 77,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -153,7 +153,7 @@
       "model": "Z 14-24mm f/2.8 S",
       "weight": 650,
       "length": 124,
-      "width": 89,
+      "filter": "",
       "teleconverters": [],
       "data": [
         {
@@ -175,7 +175,7 @@
       "model": "Z 24-120mm f/4 S",
       "weight": 630,
       "length": 114,
-      "width": 77,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
@@ -197,7 +197,7 @@
       "model": "Z 600mm f/4 TC VR S",
       "weight": 3260,
       "length": 437,
-      "width": 148,
+      "filter": 148,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -213,7 +213,7 @@
       "model": "Z 400mm f/2.8 TC VR S",
       "weight": 2950,
       "length": 365,
-      "width": 156,
+      "filter": 156,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -240,6 +240,9 @@
     {
       "id": 1013,
       "model": "Z 14-30mm f/4 S",
+      "weight": 485,
+      "length": 85,
+      "filter": 82,
       "teleconverters": [],
       "data": [
         {
@@ -280,7 +283,7 @@
       "model": "Z 400mm f/4.5 VR S",
       "weight": 1245,
       "length": 235,
-      "width": 98,
+      "filter": 98,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -296,7 +299,7 @@
       "model": "Z 600mm f/6.3 VR S PF",
       "weight": 1470,
       "length": 278,
-      "width": 106,
+      "filter": 106,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -312,7 +315,7 @@
       "model": "Z 800mm f/6.3 VR S PF",
       "weight": 2385,
       "length": 385,
-      "width": 106,
+      "filter": 106,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -328,7 +331,7 @@
       "model": "Z 24-70mm f/2.8 S II",
       "weight": 750,
       "length": 126,
-      "width": 89,
+      "filter": 89,
       "teleconverters": [],
       "data": [
         {
@@ -350,7 +353,7 @@
       "model": "Z 28-400mm f/4-8 VR",
       "weight": 725,
       "length": 140,
-      "width": 84,
+      "filter": 84,
       "teleconverters": [],
       "data": [
         {
@@ -372,7 +375,7 @@
       "model": "Z 24mm f/1.8 S",
       "weight": 450,
       "length": 96,
-      "width": 78,
+      "filter": 78,
       "teleconverters": [],
       "data": [
         {
@@ -388,7 +391,7 @@
       "model": "Z 50mm f/1.8 S",
       "weight": 415,
       "length": 87,
-      "width": 73,
+      "filter": 73,
       "teleconverters": [],
       "data": [
         {

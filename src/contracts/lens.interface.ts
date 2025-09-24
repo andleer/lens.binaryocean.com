@@ -13,7 +13,7 @@ export interface Lens {
   mount: string;
   weight?: number; // Weight in grams (optional for backward compatibility)
   length?: number; // Length in mm (optional for backward compatibility)
-  width?: number; // Width/diameter in mm (optional for backward compatibility)
+  filter?: number | string; // Filter thread diameter in mm or empty string if no threads
   teleconverters: number[]; // [1.4, 2.0] - available teleconverter multipliers
   data: LensSpecification[];
 }
