@@ -5,6 +5,9 @@
     {
       "id": 4500,
       "model": "28-75mm f/2.8 Di III VXD G2",
+      "weight": 540,
+      "length": 118,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -42,6 +45,9 @@
     {
       "id": 4501,
       "model": "70-300mm f/4.5-6.3 Di III RXD",
+      "weight": 545,
+      "length": 148,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -85,6 +91,9 @@
     {
       "id": 4502,
       "model": "17-28mm f/2.8 Di III RXD",
+      "weight": 420,
+      "length": 99,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -116,6 +125,9 @@
     {
       "id": 4503,
       "model": "150-500mm f/5-6.7 Di III VC VXD",
+      "weight": 1725,
+      "length": 210,
+      "filter": 82,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -153,6 +165,9 @@
     {
       "id": 4504,
       "model": "90mm f/2.8 Di III Macro VXD",
+      "weight": 630,
+      "length": 126,
+      "filter": 62,
       "teleconverters": [],
       "data": [
         {
@@ -166,6 +181,9 @@
     {
       "id": 4505,
       "model": "35-150mm f/2-2.8 Di III VXD",
+      "weight": 1165,
+      "length": 158,
+      "filter": 82,
       "teleconverters": [],
       "data": [
         {

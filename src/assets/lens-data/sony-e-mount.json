@@ -5,6 +5,9 @@
     {
       "id": 3500,
       "model": "FE 90mm f/2.8 Macro G OSS",
+      "weight": 602,
+      "length": 130,
+      "filter": 62,
       "teleconverters": [],
       "data": [
         {
@@ -18,6 +21,9 @@
     {
       "id": 3501,
       "model": "FE 50mm f/2.8 Macro",
+      "weight": 236,
+      "length": 71,
+      "filter": 55,
       "teleconverters": [],
       "data": [
         {
@@ -31,6 +37,9 @@
     {
       "id": 3502,
       "model": "FE 70-200mm f/2.8 Macro G OSS II",
+      "weight": 1045,
+      "length": 200,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
@@ -50,6 +59,9 @@
     {
       "id": 3503,
       "model": "FE 35mm f/1.8",
+      "weight": 280,
+      "length": 73,
+      "filter": 55,
       "teleconverters": [],
       "data": [
         {

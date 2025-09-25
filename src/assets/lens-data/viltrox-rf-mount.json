@@ -53,6 +53,9 @@
     {
       "id": 5503,
       "model": "AF 24mm f/1.8 STM",
+      "weight": 185,
+      "length": 49,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -66,6 +69,9 @@
     {
       "id": 5504,
       "model": "AF 16mm f/1.8 STM",
+      "weight": 400,
+      "length": 80,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -79,6 +85,9 @@
     {
       "id": 5505,
       "model": "AF 35mm f/1.8 STM",
+      "weight": 270,
+      "length": 56,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {

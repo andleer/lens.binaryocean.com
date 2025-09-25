@@ -20,10 +20,10 @@
     },
     {
       "id": 6001,
+      "model": "AF 20mm f/2.8 Pancake",
       "weight": 180,
       "length": 35,
       "filter": 43,
-      "model": "AF 20mm f/2.8 Pancake",
       "teleconverters": [],
       "data": [
         {
@@ -36,10 +36,10 @@
     },
     {
       "id": 6002,
+      "model": "AF 23mm f/1.4 STM",
       "weight": 420,
       "length": 75,
       "filter": 67,
-      "model": "AF 23mm f/1.4 STM",
       "teleconverters": [],
       "data": [
         {
@@ -52,10 +52,10 @@
     },
     {
       "id": 6003,
+      "model": "AF 24mm f/1.8 STM",
       "weight": 330,
       "length": 66,
       "filter": 62,
-      "model": "AF 24mm f/1.8 STM",
       "teleconverters": [],
       "data": [
         {
@@ -69,6 +69,9 @@
     {
       "id": 6004,
       "model": "AF 28mm f/4.5 Macro",
+      "weight": 195,
+      "length": 62,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -82,6 +85,9 @@
     {
       "id": 6005,
       "model": "AF 33mm f/1.4 STM",
+      "weight": 340,
+      "length": 66,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -95,6 +101,9 @@
     {
       "id": 6006,
       "model": "AF 40mm f/2.5 Close Focus",
+      "weight": 185,
+      "length": 45,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -108,6 +117,9 @@
     {
       "id": 6007,
       "model": "AF 56mm f/1.4 STM",
+      "weight": 290,
+      "length": 58,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -121,6 +133,9 @@
     {
       "id": 6008,
       "model": "AF 56mm f/1.7 Close Focus",
+      "weight": 160,
+      "length": 45,
+      "filter": 52,
       "teleconverters": [],
       "data": [
         {
@@ -134,6 +149,9 @@
     {
       "id": 6009,
       "model": "AF 75mm f/1.2 Pro",
+      "weight": 740,
+      "length": 98,
+      "filter": 72,
       "teleconverters": [],
       "data": [
         {
@@ -147,6 +165,9 @@
     {
       "id": 6010,
       "model": "AF 85mm f/1.8 STM",
+      "weight": 485,
+      "length": 89,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -160,6 +181,9 @@
     {
       "id": 6011,
       "model": "AF 100mm f/2.8 Macro",
+      "weight": 540,
+      "length": 105,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -173,6 +197,9 @@
     {
       "id": 6012,
       "model": "AF 135mm f/1.8 LAB",
+      "weight": 950,
+      "length": 136,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {

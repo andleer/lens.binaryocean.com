@@ -5,6 +5,9 @@
     {
       "id": 3000,
       "model": "RF 100mm f/2.8L Macro IS USM",
+      "weight": 730,
+      "length": 148,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -18,6 +21,9 @@
     {
       "id": 3001,
       "model": "RF 85mm f/2 Macro IS STM",
+      "weight": 500,
+      "length": 90,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -31,6 +37,9 @@
     {
       "id": 3002,
       "model": "RF 100-500mm f/4.5-7.1L IS USM",
+      "weight": 1370,
+      "length": 208,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
@@ -50,6 +59,9 @@
     {
       "id": 3003,
       "model": "RF 70-200mm f/2.8L IS USM",
+      "weight": 1070,
+      "length": 146,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
@@ -69,6 +81,9 @@
     {
       "id": 3004,
       "model": "RF 100-400mm f/5.6-8L IS USM",
+      "weight": 635,
+      "length": 165,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {

@@ -7,7 +7,7 @@
       "model": "28-75mm f/2.8 Di III RXD",
       "weight": 550,
       "length": 117,
-      "width": 73,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -29,7 +29,7 @@
       "model": "70-300mm f/4.5-6.3 Di III RXD",
       "weight": 545,
       "length": 148,
-      "width": 77,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
@@ -51,7 +51,7 @@
       "model": "150-500mm f/5-6.7 Di III VC VXD",
       "weight": 1725,
       "length": 209,
-      "width": 93,
+      "filter": 82,
       "teleconverters": [1.4, 2.0],
       "data": [
         {
@@ -73,7 +73,7 @@
       "model": "17-28mm f/2.8 Di III RXD",
       "weight": 420,
       "length": 99,
-      "width": 73,
+      "filter": 67,
       "teleconverters": [],
       "data": [
         {
