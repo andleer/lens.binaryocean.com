@@ -79,6 +79,70 @@
           "magnification": 0.15
         }
       ]
+    },
+    {
+      "id": 6006,
+      "model": "AF 23mm f/1.4",
+      "weight": 420,
+      "length": 75,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 23,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 6007,
+      "model": "AF 56mm f/1.4",
+      "weight": 520,
+      "length": 92,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 56,
+          "aperture": 1.4,
+          "minFocus": 0.55,
+          "magnification": 0.14
+        }
+      ]
+    },
+    {
+      "id": 6008,
+      "model": "AF 33mm f/1.4",
+      "weight": 470,
+      "length": 78,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 33,
+          "aperture": 1.4,
+          "minFocus": 0.4,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 6009,
+      "model": "AF 13mm f/1.4",
+      "weight": 585,
+      "length": 99,
+      "filter": 77,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 13,
+          "aperture": 1.4,
+          "minFocus": 0.22,
+          "magnification": 0.1
+        }
+      ]
     }
   ]
 }
