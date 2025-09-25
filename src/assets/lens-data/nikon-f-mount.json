@@ -331,6 +331,70 @@
           "magnification": 0.32
         }
       ]
+    },
+    {
+      "id": 2018,
+      "model": "AF-S NIKKOR 20mm f/1.8G ED",
+      "weight": 355,
+      "length": 80.5,
+      "filter": 77,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 20,
+          "aperture": 1.8,
+          "minFocus": 0.2,
+          "magnification": 0.23
+        }
+      ]
+    },
+    {
+      "id": 2019,
+      "model": "AF-S NIKKOR 105mm f/1.4E ED",
+      "weight": 985,
+      "length": 106,
+      "filter": 82,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 105,
+          "aperture": 1.4,
+          "minFocus": 1.0,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 2020,
+      "model": "AF-S NIKKOR 50mm f/1.8G",
+      "weight": 185,
+      "length": 52.5,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 1.8,
+          "minFocus": 0.45,
+          "magnification": 0.15
+        }
+      ]
+    },
+    {
+      "id": 2021,
+      "model": "AF-S NIKKOR 85mm f/1.8G",
+      "weight": 350,
+      "length": 73,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 85,
+          "aperture": 1.8,
+          "minFocus": 0.8,
+          "magnification": 0.13
+        }
+      ]
     }
   ]
 }
