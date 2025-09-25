@@ -5,6 +5,9 @@
     {
       "id": 6000,
       "model": "AF 13mm f/1.4 STM",
+      "weight": 585,
+      "length": 99,
+      "filter": 77,
       "teleconverters": [],
       "data": [
         {
@@ -17,6 +20,9 @@
     },
     {
       "id": 6001,
+      "weight": 180,
+      "length": 35,
+      "filter": 43,
       "model": "AF 20mm f/2.8 Pancake",
       "teleconverters": [],
       "data": [
@@ -30,6 +36,9 @@
     },
     {
       "id": 6002,
+      "weight": 420,
+      "length": 75,
+      "filter": 67,
       "model": "AF 23mm f/1.4 STM",
       "teleconverters": [],
       "data": [
@@ -43,6 +52,9 @@
     },
     {
       "id": 6003,
+      "weight": 330,
+      "length": 66,
+      "filter": 62,
       "model": "AF 24mm f/1.8 STM",
       "teleconverters": [],
       "data": [
