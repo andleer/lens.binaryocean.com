@@ -153,7 +153,7 @@
       "model": "Z 14-24mm f/2.8 S",
       "weight": 650,
       "length": 124,
-      "filter": "",
+      "filter": 0,
       "teleconverters": [],
       "data": [
         {
@@ -421,6 +421,28 @@
           "aperture": 1.8,
           "minFocus": 0.2,
           "magnification": 0.19
+        }
+      ]
+    },
+    {
+      "id": 1036,
+      "model": "Z 70-180mm f/2.8",
+      "weight": 795,
+      "length": 151,
+      "filter": 77,
+      "teleconverters": [1.4, 2.0],
+      "data": [
+        {
+          "focalLength": 70,
+          "aperture": 2.8,
+          "minFocus": 0.27,
+          "magnification": 0.48
+        },
+        {
+          "focalLength": 180,
+          "aperture": 2.8,
+          "minFocus": 0.85,
+          "magnification": 0.31
         }
       ]
     }
