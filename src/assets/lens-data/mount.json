@@ -1,0 +1,25 @@
+{
+  "mount":[
+    {
+      "Name": "Nikon Z",
+      "crop": [
+        { "type": "FX", "factor": 1.0 , "default": true },
+        { "type": "DX", "factor": 1.5 }
+      ]
+    },
+    {
+      "Name": "Canon RF",
+      "crop": [
+        { "type": "FF", "factor": 1.0 , "default": true },
+        { "type": "APS-C", "factor": 1.6 }
+      ]
+    },
+    {
+      "Name": "Sony E",
+      "crop": [
+        { "type": "FF", "factor": 1.0 , "default": true },
+        { "type": "APS-C", "factor": 1.5 }
+      ]
+    }
+  ]
+}
