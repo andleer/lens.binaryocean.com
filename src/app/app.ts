@@ -34,7 +34,7 @@ export class App {
     let filteredLenses: Lens[];
     
     // If no filters are applied, show empty list
-    if (criteria.manufacturers.length === 0 && criteria.mounts.length === 0) {
+    if (criteria.manufacturers.length === 0 && criteria.mounts.length === 0 && criteria.formats.length === 0) {
       filteredLenses = [];
     } else {
       // Use the service's filterLenses method
@@ -44,6 +44,9 @@ export class App {
       }
       if (criteria.mounts.length > 0) {
         serviceCriteria.mounts = criteria.mounts;
+      }
+      if (criteria.formats.length > 0) {
+        serviceCriteria.formats = criteria.formats;
       }
       const filteredSignal = this.lensDataService.filterLenses(serviceCriteria);
       filteredLenses = [...filteredSignal()];

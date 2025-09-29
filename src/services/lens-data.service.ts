@@ -13,6 +13,7 @@ import tamronRFLenses from '../assets/lens-data/tamron-rf-mount.json';
 import viltroxZLenses from '../assets/lens-data/viltrox-z-mount.json';
 import viltroxRFLenses from '../assets/lens-data/viltrox-rf-mount.json';
 import viltroxELenses from '../assets/lens-data/viltrox-e-mount.json';
+import sigmaZLenses from '../assets/lens-data/sigma-z-mount.json';
 
 // Interface for the structure of lens data files
 interface LensDataSource {
@@ -59,7 +60,8 @@ export class LensDataService {
       tamronRFLenses,
       viltroxZLenses,
       viltroxELenses,
-      viltroxRFLenses
+      viltroxRFLenses,
+      sigmaZLenses
     ];
 
     const allLenses = lensDataSources.flatMap(source => 
@@ -127,6 +129,7 @@ export class LensDataService {
   filterLenses(criteria: {
     manufacturers?: string[];
     mounts?: string[];
+    formats?: string[];
     ids?: number[];
     teleconverterCompatible?: boolean;
   }) {
@@ -146,6 +149,13 @@ export class LensDataService {
             lens.mount.toLowerCase() === mount.toLowerCase()
           );
           if (!matchesMount) return false;
+        }
+
+        // Filter by formats (Full vs Crop)
+        if (criteria.formats && criteria.formats.length > 0) {
+          const lensFormat = (lens as any).cropFactor ? 'Crop' : 'Full';
+          const matchesFormat = criteria.formats.includes(lensFormat);
+          if (!matchesFormat) return false;
         }
 
         // Filter by IDs

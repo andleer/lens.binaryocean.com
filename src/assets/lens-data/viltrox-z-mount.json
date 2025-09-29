@@ -161,6 +161,57 @@
           "magnification": 0.1
         }
       ]
+    },
+    {
+      "id": 5010,
+      "model": "AF 23mm f/1.4 DC DN",
+      "weight": 245,
+      "length": 54,
+      "filter": 52,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 23,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 5011,
+      "model": "AF 33mm f/1.4 DC DN",
+      "weight": 330,
+      "length": 63,
+      "filter": 52,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 33,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.1
+        }
+      ]
+    },
+    {
+      "id": 5012,
+      "model": "AF 56mm f/1.4 DC DN",
+      "weight": 290,
+      "length": 58,
+      "filter": 52,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 56,
+          "aperture": 1.4,
+          "minFocus": 0.4,
+          "magnification": 0.15
+        }
+      ]
     }
   ]
 }

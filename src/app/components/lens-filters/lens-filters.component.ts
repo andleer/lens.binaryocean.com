@@ -5,6 +5,7 @@ import { LensDataService } from '../../../services/lens-data.service';
 export interface FilterCriteria {
   manufacturers: string[];
   mounts: string[];
+  formats: string[];
 }
 
 @Component({
@@ -20,9 +21,13 @@ export class LensFiltersComponent {
   // Filter properties - arrays for multiple selections
   selectedManufacturers = signal<string[]>([]);
   selectedMounts = signal<string[]>([]);
+  selectedFormats = signal<string[]>([]);
   
   // Output events
   filtersChanged = output<FilterCriteria>();
+  
+  // Format options
+  readonly formats = ['Full', 'Crop'];
   
   // Get unique manufacturers and mounts from service
   get manufacturers(): string[] {
@@ -53,10 +58,21 @@ export class LensFiltersComponent {
     this.emitFilters();
   }
 
+  toggleFormat(format: string) {
+    const current = this.selectedFormats();
+    if (current.includes(format)) {
+      this.selectedFormats.set(current.filter(f => f !== format));
+    } else {
+      this.selectedFormats.set([...current, format]);
+    }
+    this.emitFilters();
+  }
+
   private emitFilters() {
     const criteria: FilterCriteria = {
       manufacturers: this.selectedManufacturers(),
-      mounts: this.selectedMounts()
+      mounts: this.selectedMounts(),
+      formats: this.selectedFormats()
     };
     this.filtersChanged.emit(criteria);
   }

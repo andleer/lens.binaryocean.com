@@ -1,0 +1,121 @@
+{
+  "manufacturer": "Sigma",
+  "mount": "Nikon Z",
+  "lenses": [
+    {
+      "id": 7000,
+      "model": "16mm f/1.4 DC DN Contemporary",
+      "weight": 405,
+      "length": 92,
+      "filter": 67,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 16,
+          "aperture": 1.4,
+          "minFocus": 0.25,
+          "magnification": 0.05
+        }
+      ]
+    },
+    {
+      "id": 7001,
+      "model": "30mm f/1.4 DC DN Contemporary",
+      "weight": 265,
+      "length": 73,
+      "filter": 52,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 30,
+          "aperture": 1.4,
+          "minFocus": 0.3,
+          "magnification": 0.14
+        }
+      ]
+    },
+    {
+      "id": 7002,
+      "model": "56mm f/1.4 DC DN Contemporary",
+      "weight": 280,
+      "length": 66,
+      "filter": 55,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 56,
+          "aperture": 1.4,
+          "minFocus": 0.5,
+          "magnification": 0.13
+        }
+      ]
+    },
+    {
+      "id": 7003,
+      "model": "18-50mm f/2.8 DC DN Contemporary",
+      "weight": 290,
+      "length": 76,
+      "filter": 55,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 18,
+          "aperture": 2.8,
+          "minFocus": 0.12,
+          "magnification": 0.33
+        },
+        {
+          "focalLength": 24,
+          "aperture": 2.8,
+          "minFocus": 0.13,
+          "magnification": 0.27
+        },
+        {
+          "focalLength": 35,
+          "aperture": 2.8,
+          "minFocus": 0.17,
+          "magnification": 0.25
+        },
+        {
+          "focalLength": 50,
+          "aperture": 2.8,
+          "minFocus": 0.19,
+          "magnification": 0.31
+        }
+      ]
+    },
+    {
+      "id": 7004,
+      "model": "10-18mm f/2.8 DC DN Contemporary",
+      "weight": 240,
+      "length": 63,
+      "filter": 62,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 10,
+          "aperture": 2.8,
+          "minFocus": 0.11,
+          "magnification": 0.18
+        },
+        {
+          "focalLength": 14,
+          "aperture": 2.8,
+          "minFocus": 0.11,
+          "magnification": 0.13
+        },
+        {
+          "focalLength": 18,
+          "aperture": 2.8,
+          "minFocus": 0.11,
+          "magnification": 0.10
+        }
+      ]
+    }
+  ]
+}

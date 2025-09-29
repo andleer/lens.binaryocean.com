@@ -1,7 +1,7 @@
 <section class="filters-section"> 
   <div class="filter-controls">
     <div class="filter-group">
-      <label>Manufacturers:</label>
+      <label>Manufacturer:</label>
       <div class="checkbox-group">
         @for (manufacturer of manufacturers; track manufacturer) {
           <label class="checkbox-label">
@@ -16,7 +16,7 @@
     </div>
 
     <div class="filter-group">
-      <label>Mounts:</label>
+      <label>Mount:</label>
       <div class="checkbox-group">
         @for (mount of mounts; track mount) {
           <label class="checkbox-label">
@@ -25,6 +25,21 @@
               [checked]="selectedMounts().includes(mount)"
               (change)="toggleMount(mount)">
             <span>{{ mount }}</span>
+          </label>
+        }
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label>Format:</label>
+      <div class="checkbox-group">
+        @for (format of formats; track format) {
+          <label class="checkbox-label">
+            <input 
+              type="checkbox" 
+              [checked]="selectedFormats().includes(format)"
+              (change)="toggleFormat(format)">
+            <span>{{ format }}</span>
           </label>
         }
       </div>

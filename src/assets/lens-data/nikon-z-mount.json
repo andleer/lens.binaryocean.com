@@ -445,6 +445,135 @@
           "magnification": 0.31
         }
       ]
+    },
+    {
+      "id": 1037,
+      "model": "Z DX 16-50mm f/3.5-6.3 VR",
+      "weight": 135,
+      "length": 32,
+      "filter": 46,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 16,
+          "aperture": 3.5,
+          "minFocus": 0.25,
+          "magnification": 0.17
+        },
+        {
+          "focalLength": 24,
+          "aperture": 4.0,
+          "minFocus": 0.25,
+          "magnification": 0.20
+        },
+        {
+          "focalLength": 35,
+          "aperture": 5.0,
+          "minFocus": 0.25,
+          "magnification": 0.23
+        },
+        {
+          "focalLength": 50,
+          "aperture": 6.3,
+          "minFocus": 0.25,
+          "magnification": 0.26
+        }
+      ]
+    },
+    {
+      "id": 1038,
+      "model": "Z DX 50-250mm f/4.5-6.3 VR",
+      "weight": 405,
+      "length": 110,
+      "filter": 62,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 4.5,
+          "minFocus": 0.5,
+          "magnification": 0.23
+        },
+        {
+          "focalLength": 85,
+          "aperture": 5.0,
+          "minFocus": 0.5,
+          "magnification": 0.28
+        },
+        {
+          "focalLength": 135,
+          "aperture": 5.6,
+          "minFocus": 1.0,
+          "magnification": 0.22
+        },
+        {
+          "focalLength": 200,
+          "aperture": 6.0,
+          "minFocus": 1.1,
+          "magnification": 0.28
+        },
+        {
+          "focalLength": 250,
+          "aperture": 6.3,
+          "minFocus": 1.1,
+          "magnification": 0.29
+        }
+      ]
+    },
+    {
+      "id": 1039,
+      "model": "Z DX 18-140mm f/3.5-6.3 VR",
+      "weight": 315,
+      "length": 90,
+      "filter": 62,
+      "cropFactor": 1.5,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 18,
+          "aperture": 3.5,
+          "minFocus": 0.2,
+          "magnification": 0.33
+        },
+        {
+          "focalLength": 24,
+          "aperture": 4.0,
+          "minFocus": 0.2,
+          "magnification": 0.31
+        },
+        {
+          "focalLength": 35,
+          "aperture": 4.5,
+          "minFocus": 0.2,
+          "magnification": 0.29
+        },
+        {
+          "focalLength": 50,
+          "aperture": 5.0,
+          "minFocus": 0.3,
+          "magnification": 0.26
+        },
+        {
+          "focalLength": 85,
+          "aperture": 5.6,
+          "minFocus": 0.45,
+          "magnification": 0.24
+        },
+        {
+          "focalLength": 105,
+          "aperture": 5.9,
+          "minFocus": 0.45,
+          "magnification": 0.26
+        },
+        {
+          "focalLength": 140,
+          "aperture": 6.3,
+          "minFocus": 0.45,
+          "magnification": 0.30
+        }
+      ]
     }
   ]
 }
