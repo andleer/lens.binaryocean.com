@@ -14,6 +14,7 @@ import viltroxZLenses from '../assets/lens-data/viltrox-z-mount.json';
 import viltroxRFLenses from '../assets/lens-data/viltrox-rf-mount.json';
 import viltroxELenses from '../assets/lens-data/viltrox-e-mount.json';
 import sigmaZLenses from '../assets/lens-data/sigma-z-mount.json';
+import voigtlanderZLenses from '../assets/lens-data/voigtlander-z-mount.json';
 
 // Interface for the structure of lens data files
 interface LensDataSource {
@@ -61,7 +62,8 @@ export class LensDataService {
       viltroxZLenses,
       viltroxELenses,
       viltroxRFLenses,
-      sigmaZLenses
+      sigmaZLenses,
+      voigtlanderZLenses
     ];
 
     const allLenses = lensDataSources.flatMap(source => 

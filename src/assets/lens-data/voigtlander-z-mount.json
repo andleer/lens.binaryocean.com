@@ -1,0 +1,134 @@
+{
+  "manufacturer": "Voigtlander",
+  "mount": "Nikon Z",
+  "lenses": [
+    {
+      "id": 7000,
+      "model": "APO-LANTHAR 50mm f/2 Aspherical",
+      "weight": 434,
+      "length": 61,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 50,
+          "aperture": 2.0,
+          "minFocus": 0.45,
+          "magnification": 0.15
+        }
+      ]
+    },
+    {
+      "id": 7001,
+      "model": "NOKTON 40mm f/1.2 Aspherical",
+      "weight": 350,
+      "length": 43,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 40,
+          "aperture": 1.2,
+          "minFocus": 0.37,
+          "magnification": 0.12
+        }
+      ]
+    },
+    {
+      "id": 7002,
+      "model": "NOKTON 35mm f/1.2 Aspherical",
+      "weight": 313,
+      "length": 44,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 35,
+          "aperture": 1.2,
+          "minFocus": 0.35,
+          "magnification": 0.10
+        }
+      ]
+    },
+    {
+      "id": 7003,
+      "model": "MACRO APO-LANTHAR 65mm f/2 Aspherical",
+      "weight": 518,
+      "length": 82,
+      "filter": 67,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 65,
+          "aperture": 2.0,
+          "minFocus": 0.31,
+          "magnification": 0.50
+        }
+      ]
+    },
+    {
+      "id": 7004,
+      "model": "APO-LANTHAR 35mm f/2 Aspherical",
+      "weight": 254,
+      "length": 37,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 35,
+          "aperture": 2.0,
+          "minFocus": 0.33,
+          "magnification": 0.13
+        }
+      ]
+    },
+    {
+      "id": 7005,
+      "model": "ULTRON 35mm f/2 Aspherical",
+      "weight": 225,
+      "length": 37,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 35,
+          "aperture": 2.0,
+          "minFocus": 0.33,
+          "magnification": 0.13
+        }
+      ]
+    },
+    {
+      "id": 7006,
+      "model": "NOKTON 23mm f/1.2 Aspherical",
+      "weight": 410,
+      "length": 59,
+      "filter": 62,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 23,
+          "aperture": 1.2,
+          "minFocus": 0.30,
+          "magnification": 0.08
+        }
+      ]
+    },
+    {
+      "id": 7007,
+      "model": "COLOR-SKOPAR 21mm f/3.5 Aspherical",
+      "weight": 136,
+      "length": 22,
+      "filter": 58,
+      "teleconverters": [],
+      "data": [
+        {
+          "focalLength": 21,
+          "aperture": 3.5,
+          "minFocus": 0.21,
+          "magnification": 0.07
+        }
+      ]
+    }
+  ]
+}
